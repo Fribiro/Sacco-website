@@ -48,30 +48,30 @@ const Nav = styled.ul`
   padding-left: 0;
   height: 100%;
   //margin-right: 4rem;
-`
 
-const Navitem = styled.li`
-  display: flex;
-  align-items: center;
-  height: 100%;
-  padding: 0 0.6rem;
-  color: #fff;
-`;
+  & li {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 0.6rem;
+    color: #fff;
+  }
 
-const StyledLink = styled(Link)`
-  margin: 0 0.7rem;
-  text-decoration: none;
-  align-items: center;
-  width: 100%;
-  position: relative;
-  font-size: 1rem;
+  & li a {
+    margin: 0 0.7rem;
+    text-decoration: none;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    font-size: 1rem;
+  }
 
-  &:hover {
+  &li:hover {
     cursor: pointer;
     color: #76bf30;
   }
 
-  &:after {
+  &li:after {
     content: "";
     position: absolute;
     width: 100%;
@@ -83,15 +83,26 @@ const StyledLink = styled(Link)`
     transition: 0.5s;
   }
 
-  &:hover::after {
+  &li:hover::after {
     transform: scaleX(1);
     transform-origin: center;
   }
-` 
 
-const Headerbody = styled.div`
+  ${media.mobile} {
+    display: flex;
+    flex-direction: column;
+    background-color: #76bf30;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 1rem 0;
+    right: 0;
 
-`
+    & li {
+      padding: 1rem;
+    }
+  }
+`;
 
 const Header = () => {
 
@@ -121,8 +132,8 @@ const Header = () => {
               animationInDelay="0s"
               isVisible={true}
             >
-              <Navitem className="">
-                <StyledLink
+              <li className="">
+                <a
                   className=""
                   aria-current="page"
                   activeclassName="active"
@@ -131,15 +142,15 @@ const Header = () => {
                   smooth={true}
                 >
                   Home
-                </StyledLink>
-              </Navitem>
+                </a>
+              </li>
             </Animated>
             <Animated animationIn="slideInRight" animationInDelay=".5s">
-              <Navitem className="">
-                <StyledLink className="" to="about" spy={true} smooth={true}>
+              <li className="">
+                <a className="" to="about" spy={true} smooth={true}>
                   About
-                </StyledLink>
-              </Navitem>
+                </a>
+              </li>
             </Animated>
 
             <Animated
@@ -147,11 +158,11 @@ const Header = () => {
               animationInDelay="1.5s"
               isVisible={true}
             >
-              <Navitem className="">
-                <StyledLink className="" to="services" spy={true} smooth={true}>
+              <li className="">
+                <a className="" to="services" spy={true} smooth={true}>
                   Services
-                </StyledLink>
-              </Navitem>
+                </a>
+              </li>
             </Animated>
 
             <Animated
@@ -159,16 +170,16 @@ const Header = () => {
               animationInDelay="2s"
               isVisible={true}
             >
-              <Navitem className="">
-                <StyledLink
+              <li className="">
+                <a
                   className=""
                   to="portfolio"
                   spy={true}
                   smooth={true}
                 >
                   Contacts
-                </StyledLink>
-              </Navitem>
+                </a>
+              </li>
             </Animated>
           </Nav>
         </Navwrapper>

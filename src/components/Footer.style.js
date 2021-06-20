@@ -2,20 +2,20 @@ import React from "react";
 import { Link } from "react-scroll";
 import styled from "styled-components";
 
+const media = {
+  mobile: "@media (min-width: 320px) and (max-width: 480px)",
+  tablet: "@media (min-width: 481px) and (max-width: 768px)",
+  laptop: "@media (min-width: 769px) and (max-width: 1024px)",
+  desktops: "@media (min-width: 1025px) and (max-width: 1200px)",
+  extralarge: "@media (min-width: 1201px)",
+};
+
+
 const Footerwrapper = styled.div`
   left: 0;
   bottom: 0;
   width: 100%;
   position: relative;
-  /* background: linear-gradient(
-      rgba(118, 191, 48, 0.85),
-      rgba(118, 191, 48, 0.85)
-    ),
-    url("/img/desk7.jpg");
-  background: no repeat center center scroll;
-  -webkit-background-size: cover;
-  background-size: cover;
-  filter: brightness(60%); */
 
   & .container {
     padding: 2.5rem 0;
@@ -26,10 +26,7 @@ const Footerwrapper = styled.div`
         rgba(118, 191, 48, 0.89),
         rgba(118, 191, 48, 0.89)
       ),
-      url("/img/desk7.jpg");
-    background: no repeat center center scroll;
-    -webkit-background-size: cover;
-    background-size: cover;
+      url("/img/desk7.jpg") no-repeat center / cover;
     filter: brightness(85%);
     position: absolute;
     left: 0;
@@ -197,23 +194,13 @@ const Footerwrapper = styled.div`
     background: #000;
     line-height: 50px;
   }
-`;
 
-const Bgimg = styled.div`
-  //position: fixed;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  display: block;
-  background: url("/img/desk7.jpg");
-  background: no repeat center center scroll;
-  -webkit-background-size: cover;
-  background-size: cover;
-  filter: brightness(40%);
+  ${media.mobile} {
+    & .segment-one, .segment-two, .segment-three, .segment-four {
+      padding: 1rem 2rem;
+    }
+  }
 `;
-
 const Copyright = styled.div`
   text-align: center;
   background: rgba(118, 191, 48, 0.9);
@@ -223,6 +210,11 @@ const Copyright = styled.div`
   width: 100%;
   color: rgba(255, 255, 255, 0.7);
   font-size: large 0.9rem;
+
+  ${media.mobile} {
+    line-height: 1rem;
+    padding: .5rem 0;
+  }
 `;
 
 const Footer = () => {

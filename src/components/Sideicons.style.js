@@ -6,6 +6,7 @@ const Iconswrapper = styled.nav`
   width: 1.9rem;
   z-index: 2;
   top: 40%;
+  right: 0;
 `;
 const Iconlist = styled.ul`
     width: 100%;
@@ -22,7 +23,7 @@ const Iconlistitem = styled.li`
   & img {
     width: 100%;
     height: 100%;
-    padding: 0 0 0.2rem 0.3rem;
+    padding: 0 0.3rem 0.2rem 0;
     position: absolute;
     z-index: -1;
   }
