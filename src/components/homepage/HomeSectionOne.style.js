@@ -6,6 +6,15 @@ const Main = styled.div`
   height: 30rem;
   display: flex;
   padding: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  & .title {
+    color: rgba(118, 191, 48, 0.9);
+    margin: 2rem;
+    border-bottom: 0.2rem solid rgba(118, 191, 48, 0.9);
+  }
 
   & .sectionOneWrapper {
     display: flex;
@@ -40,7 +49,7 @@ const Main = styled.div`
     margin: 1rem;
   }
 
-  svg {
+  & svg {
     width: 100%;
     height: 100%;
   }
@@ -55,6 +64,7 @@ const HomeSectionOne = () => {
     return (
       <>
         <Main>
+          <h2 className="title">Why Us</h2>
           <div className="sectionOneWrapper">
             <div className="col cardOne">
               <div className="icons">
@@ -89,7 +99,7 @@ const HomeSectionOne = () => {
                 Laws.Save with us, get loans and grow with us.
               </p>
             </div>
-            <div className="col cardFour">
+            {/* <div className="col cardFour">
               <div className="icons">
                 <img src="/icons/group.png" />
               </div>
@@ -99,7 +109,7 @@ const HomeSectionOne = () => {
                 that has been established under strict adherance to the Kenyan
                 Laws.Save with us, get loans and grow with us.
               </p>
-            </div>
+            </div> */}
           </div>
         </Main>
       </>
