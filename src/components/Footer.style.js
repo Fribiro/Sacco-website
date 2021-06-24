@@ -196,8 +196,24 @@ const Footerwrapper = styled.div`
   }
 
   ${media.mobile} {
-    & .segment-one, .segment-two, .segment-three, .segment-four {
+    & .segment-one,
+    .segment-two,
+    .segment-three,
+    .segment-four {
       padding: 1rem 2rem;
+    }
+  }
+
+  ${media.tablet} {
+    & .segment-one,
+    .segment-two,
+    .segment-three,
+    .segment-four {
+      padding: 1rem 2rem;
+    }
+
+    & .segment-four form input[type="submit"] {
+      padding: 3px 3px;
     }
   }
 `;
@@ -225,7 +241,7 @@ const Footer = () => {
           <div className="container">
             <div className="row">
               <div className="col-md-3 col-sm-6 col-xs-12 segment-one md-mb-30 sm-mb-30">
-                <h4>Unique Sacco</h4>
+                <h4>Unik Sacco</h4>
                 <p>
                   The number one sacco in Kenya that offers quick and easy
                   access to loans for different purposes.
@@ -279,7 +295,7 @@ const Footer = () => {
           </div>
         </Footerwrapper>
         <Copyright>
-          &copy; 2021 All Rights Reserved | Developed & Designed by Uniq Sacco.
+          &copy; 2021 All Rights Reserved | Developed & Designed by Unik Sacco.
         </Copyright>
       </>
     );

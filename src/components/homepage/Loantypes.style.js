@@ -1,13 +1,39 @@
 import React from 'react'
 import styled from "styled-components";
-import Carousel from "react-bootstrap/Carousel";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
+const responsive = {
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 3,
+    slidesToSlide: 3, // optional, default to 1.
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 2,
+    slidesToSlide: 2, // optional, default to 1.
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
+    slidesToSlide: 1, // optional, default to 1.
+  },
+};
 
 const Main = styled.div`
   width: 100%;
-  height: 30rem;
+  height: 35rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+
+  & .title {
+    color: rgba(118, 191, 48, 0.9);
+    margin: 2rem;
+    border-bottom: 0.2rem solid rgba(118, 191, 48, 0.9);
+  }
 
   & .loanWrapper {
     display: flex;
@@ -38,13 +64,13 @@ const Main = styled.div`
   & .cardImg img {
     width: 100%;
     height: 100%;
-    background-color: aqua;
+    border-radius: 0.4rem;
   }
 
   & .cardDetails {
     width: 100%;
     height: 70%;
-    padding: 4rem 1.5rem 1rem 1.5rem;
+    padding: 5rem 1.5rem 1rem 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -54,22 +80,26 @@ const Main = styled.div`
   }
 
   & .cardDetails h4 {
-    color: #000;
+    color: #fff;
   }
 
   & .cardDetails p {
     justify-content: center;
     align-items: center;
+    text-align: center;
   }
 
   & .cardDetails button {
     justify-content: center;
     align-items: center;
-    border: 0.2rem solid;
+    border: 0.15rem solid #fff;
+    color: #fff;
     background: transparent;
-    border-radius: 1rem;
+    border-radius: 2rem;
     justify-content: center;
     align-items: center;
+    padding: 0.4rem;
+    width: 10rem;
   }
 `;
 
@@ -77,15 +107,48 @@ const Loantypes = () => {
     return (
       <div>
         <Main>
-          <div className="loanWrapper">
-            <Carousel></Carousel>
+          <h2 className="title">Loans</h2>
+          {/* <Carousel
+            swipeable={false}
+            draggable={false}
+            showDots={true}
+            responsive={responsive}
+            infinite={true}
+            //autoPlay={deviceType !== "mobile" ? true : false}
+            autoPlaySpeed={1000}
+            keyBoardControl={true}
+            customTransition="all .5"
+            transitionDuration={500}
+            containerClass="carousel-container"
+            removeArrowOnDeviceType={["tablet", "mobile"]}
+            //deviceType={this.props.deviceType}
+            dotListClass="custom-dot-list-style"
+            itemClass="carousel-item-padding-40-px"
+          > */}
+            <div className="loanWrapper">
             <div className="loanCard">
               <div className="cardImg">
                 <img src="/img/desk9.jpg" />
               </div>
               <div className="cardDetails">
                 <h4> Development Loan</h4>
-                <p>You can only take this medium-term loan for investing purposes.You cannot have mmore than one credit at a time.</p>
+                <p>
+                  You can only take this medium-term loan for investing
+                  purposes.You cannot have more than one credit at a time.
+                </p>
+                <button>Read More</button>
+              </div>
+            </div>
+            <div className="loanCard md-4">
+              <div className="cardImg">
+                <img src="/img/desk9.jpg" />
+              </div>
+              <div className="cardDetails">
+                <h4>Emergency Loan</h4>
+                <p>
+                  You can only take this medium-term loan for investing
+                  purposes.You cannot have mmore than one credit at a time.
+                </p>
                 <button>Read More</button>
               </div>
             </div>
@@ -94,8 +157,11 @@ const Loantypes = () => {
                 <img src="/img/desk9.jpg" />
               </div>
               <div className="cardDetails">
-                <h4>Loan</h4>
-                <p></p>
+                <h4>Normal Loan</h4>
+                <p>
+                  You can only take this medium-term loan for investing
+                  purposes.You cannot have mmore than one credit at a time.
+                </p>
                 <button>Read More</button>
               </div>
             </div>
@@ -104,22 +170,16 @@ const Loantypes = () => {
                 <img src="/img/desk9.jpg" />
               </div>
               <div className="cardDetails">
-                <h4>Loan</h4>
-                <p></p>
+                <h4>Basic Loan</h4>
+                <p>
+                  You can only take this medium-term loan for investing
+                  purposes.You cannot have mmore than one credit at a time.
+                </p>
                 <button>Read More</button>
               </div>
             </div>
-            <div className="loanCard">
-              <div className="cardImg">
-                <img src="/img/desk9.jpg" />
-              </div>
-              <div className="cardDetails">
-                <h4>Loan</h4>
-                <p></p>
-                <button>Read More</button>
-              </div>
             </div>
-          </div>
+          {/* </Carousel> */}
         </Main>
       </div>
     );

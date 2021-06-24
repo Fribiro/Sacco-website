@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Header from "./../Header.style";
 
 const media = {
   mobile: "@media (min-width: 320px) and (max-width: 480px)",
@@ -11,7 +10,7 @@ const media = {
 };
 
 const Headerhome = styled.div`
-  height: 80vh;
+  height: 100vh;
   width: 100%;
   position: relative;
 
@@ -21,7 +20,7 @@ const Headerhome = styled.div`
     justify-content: center;
     text-align: center;
     width: 40rem;
-    margin: 14rem 0 0 20rem;
+    margin: 23rem 0 0 20rem;
   }
 
   & .headerText h1 {
@@ -29,10 +28,33 @@ const Headerhome = styled.div`
     color: rgb(118, 191, 48);
   }
   & .headerText p {
-      color: #fff;
+    color: #fff;
   }
   ${media.mobile} {
-    height: 30vh;
+    height: 40vh;
+
+    
+  }
+
+  ${media.tablet} {
+    height: 60vh;
+
+    & .headerText {
+      position: absolute;
+      vertical-align: middle;
+      justify-content: center;
+      text-align: center;
+      width: 30rem;
+      margin: 12rem 0 0 5rem;
+    }
+
+    & .headerText h1 {
+      font-family: "Abril Fatface", cursive;
+      color: rgb(118, 191, 48);
+    }
+    & .headerText p {
+      color: #fff;
+    }
   }
 `;
 
@@ -48,28 +70,10 @@ const Bgimg = styled.div`
   filter: brightness(40%);
 `;
 
-const Headertext = styled.div`
-  position: absolute;
-  vertical-align: middle;
-  justify-content: center;
-  text-align: center;
-  width: 40rem;
-  margin: 14rem 0 0 20rem;
-
-  & h1 {
-    font-family: "Abril Fatface", cursive;
-    color: rgb(118, 191, 48);
-  }
-  & p {
-    color: #fff;
-  }
-`;
-
 const Homeheader = () => {
     return (
         <Headerhome>
             <Bgimg></Bgimg>
-            <Header/>
             <div className="headerText">
                 <h1>Instant Loans</h1>
                 <p>Uniq Sacco is one of the accredited saccos found within Nairobi that has been established under strict adherance to the Kenyan Laws.Save with us, get loans and grow with us.</p>

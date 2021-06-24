@@ -13,14 +13,11 @@ const media = {
 
 const Navwrapper = styled.div`
   display: grid;
-  grid-template-columns: 20% 80%;
+  width: 100%;
   z-index: 1;
+  grid-template-columns: 20% 80%;
   position: fixed;
-  //background-color: transparent;
-
-  & .navtransparent {
-    background-color: transparent;
-  }
+  background-color: #fff;
 
   & .active {
     background-color: rgb(255, 255, 255);
@@ -34,6 +31,10 @@ const Logo = styled.div`
   display: flex;
   width: 15rem;
   height: 4.5rem;
+
+  ${media.mobile} {
+    height: 3rem;
+  }
 `
 
 const Nav = styled.ul`
@@ -54,7 +55,7 @@ const Nav = styled.ul`
     align-items: center;
     height: 100%;
     padding: 0 0.6rem;
-    color: #fff;
+    color: #000;
   }
 
   & li a {
@@ -66,12 +67,12 @@ const Nav = styled.ul`
     font-size: 1rem;
   }
 
-  &li:hover {
+  & li:hover {
     cursor: pointer;
     color: #76bf30;
   }
 
-  &li:after {
+  & li a:after {
     content: "";
     position: absolute;
     width: 100%;
@@ -83,13 +84,13 @@ const Nav = styled.ul`
     transition: 0.5s;
   }
 
-  &li:hover::after {
+  & li a:hover::after {
     transform: scaleX(1);
     transform-origin: center;
   }
 
   ${media.mobile} {
-    display: flex;
+    display: none;
     flex-direction: column;
     background-color: #76bf30;
     justify-content: center;
@@ -97,6 +98,7 @@ const Nav = styled.ul`
     margin: 0;
     padding: 1rem 0;
     right: 0;
+    height: 3rem;
 
     & li {
       padding: 1rem;
@@ -106,23 +108,10 @@ const Nav = styled.ul`
 
 const Header = () => {
 
-  const [navBackground, setNavBackground] = useState(true);
-
-    const handleScroll = () => {
-      console.log(window.scrollY);
-      const show = window.scrollY > 80;
-      if (show) {
-        setNavBackground(true);
-      } else {
-        setNavBackground(false);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-
   return (
     <div>
       <div>
-        <Navwrapper className={navBackground ? "active" : "navtransparent"}>
+        <Navwrapper>
           <Logo>
             <img src="uniqlogo.png"></img>
           </Logo>
@@ -133,7 +122,7 @@ const Header = () => {
               isVisible={true}
             >
               <li className="">
-                <a
+                <Link
                   className=""
                   aria-current="page"
                   activeclassName="active"
@@ -142,14 +131,14 @@ const Header = () => {
                   smooth={true}
                 >
                   Home
-                </a>
+                </Link>
               </li>
             </Animated>
             <Animated animationIn="slideInRight" animationInDelay=".5s">
               <li className="">
-                <a className="" to="about" spy={true} smooth={true}>
+                <Link className="" to="about" spy={true} smooth={true}>
                   About
-                </a>
+                </Link>
               </li>
             </Animated>
 
@@ -159,9 +148,9 @@ const Header = () => {
               isVisible={true}
             >
               <li className="">
-                <a className="" to="services" spy={true} smooth={true}>
+                <Link className="" to="services" spy={true} smooth={true}>
                   Services
-                </a>
+                </Link>
               </li>
             </Animated>
 
@@ -171,14 +160,14 @@ const Header = () => {
               isVisible={true}
             >
               <li className="">
-                <a
+                <Link
                   className=""
                   to="portfolio"
                   spy={true}
                   smooth={true}
                 >
                   Contacts
-                </a>
+                </Link>
               </li>
             </Animated>
           </Nav>

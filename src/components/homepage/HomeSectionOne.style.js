@@ -1,6 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
+const media = {
+  mobile: "@media (min-width: 320px) and (max-width: 480px)",
+  tablet: "@media (min-width: 481px) and (max-width: 768px)",
+  laptop: "@media (min-width: 769px) and (max-width: 1024px)",
+  desktops: "@media (min-width: 1025px) and (max-width: 1200px)",
+  extralarge: "@media (min-width: 1201px)",
+};
+
 const Main = styled.div`
   width: 100%;
   height: 30rem;
@@ -41,6 +49,7 @@ const Main = styled.div`
   & .col p {
     justify-content: center;
     align-items: center;
+    text-align: center;
   }
 
   & .icons {
@@ -57,6 +66,92 @@ const Main = styled.div`
   & .icons img {
     width: 100%;
     height: 100%;
+  }
+
+  ${media.mobile} {
+    /* & .title {
+      color: rgba(118, 191, 48, 0.9);
+      margin: 2rem;
+      border-bottom: 0.2rem solid rgba(118, 191, 48, 0.9);
+    }
+
+    & .sectionOneWrapper {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+
+    & .col {
+      display: flex;
+      padding: 1rem 2rem;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 0 0.7rem;
+      box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+    }
+
+    & .col h2 {
+      font-weight: 500;
+      color: rgba(118, 191, 48, 0.9);
+    }
+
+    & .col p {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    & .icons {
+      width: 4rem;
+      height: 4rem;
+      margin: 1rem;
+    }
+
+    & svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    & .icons img {
+      width: 100%;
+      height: 100%;
+    } */
+  }
+
+  ${media.tablet} {
+    padding: 0 1rem;
+    height: 25rem;
+
+    & .title {
+      margin: 0 0 1.5rem 0;
+    }
+
+    & .sectionOneWrapper {
+    }
+
+    & .col {
+      padding: 0.1rem 0.3rem;
+      margin: 0 0.2rem;
+      box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+    }
+
+    & .col h2 {
+      font-weight: 500;
+      font-size: 1.2rem;
+      color: rgba(118, 191, 48, 0.9);
+    }
+
+    & .col p {
+      font-size: 0.85rem;
+    }
+
+    & .icons {
+      width: 3rem;
+      height: 3rem;
+      margin: 1rem;
+    }
   }
 `;
 

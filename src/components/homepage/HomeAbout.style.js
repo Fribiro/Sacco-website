@@ -23,7 +23,7 @@ const Main = styled.div`
     justify-content: center;
     align-items: center;
   }
-  
+
   & .content {
     width: 100%;
     height: 100%;
@@ -45,6 +45,7 @@ const Main = styled.div`
     padding: 2rem;
     border-left: 1.5rem solid rgba(118, 191, 48);
     box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+    //backdrop-filter: blur(1rem) contrast(0.8);
   }
 
   & .aboutButton {
@@ -73,6 +74,26 @@ const Main = styled.div`
       margin: 0;
       margin-top: -4rem;
       padding: 1.3rem;
+    }
+  }
+
+  ${media.tablet} {
+    & .aboutWrapper {
+      width: 95%;
+    }
+    & .aboutLeftSection {
+      width: 60%;
+    }
+    & .aboutRightSection {
+      width: 60%;
+      height: 66%;
+      background: transparent;
+      backdrop-filter: brightness(70%);
+      padding: 1.6rem;
+    }
+
+    & .aboutRightSection .content p {
+      color: #fff;
     }
   }
 `;
