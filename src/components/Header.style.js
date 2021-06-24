@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import styled from "styled-components";
 import { Animated } from "react-animated-css";
+import { Icon, InlineIcon } from '@iconify/react';
+import threeBars16 from '@iconify-icons/octicon/three-bars-16';
+
 
 const media = {
   mobile: "@media (min-width: 320px) and (max-width: 480px)",
@@ -160,16 +163,12 @@ const Header = () => {
               isVisible={true}
             >
               <li className="">
-                <Link
-                  className=""
-                  to="portfolio"
-                  spy={true}
-                  smooth={true}
-                >
+                <Link className="" to="portfolio" spy={true} smooth={true}>
                   Contacts
                 </Link>
               </li>
             </Animated>
+            <Icon icon={threeBars16}/>
           </Nav>
         </Navwrapper>
       </div>

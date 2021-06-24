@@ -33,17 +33,24 @@ const Headerhome = styled.div`
   ${media.mobile} {
     height: 40vh;
 
-    
+    & .headerText {
+      width: 20rem;
+      margin: 9rem 0 0 2rem;
+    }
+
+    & .headerText h1 {
+      font-family: "Abril Fatface", cursive;
+      color: rgb(118, 191, 48);
+    }
+    & .headerText p {
+      display: none;
+    }
   }
 
   ${media.tablet} {
     height: 60vh;
 
     & .headerText {
-      position: absolute;
-      vertical-align: middle;
-      justify-content: center;
-      text-align: center;
       width: 30rem;
       margin: 12rem 0 0 5rem;
     }

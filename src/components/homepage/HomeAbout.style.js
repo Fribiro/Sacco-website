@@ -59,6 +59,8 @@ const Main = styled.div`
   }
 
   ${media.mobile} {
+    margin: 2rem 0;
+    
     & .aboutWrapper {
       flex-direction: column;
       width: 100%;
@@ -73,7 +75,13 @@ const Main = styled.div`
       height: 74%;
       margin: 0;
       margin-top: -4rem;
-      padding: 1.3rem;
+      padding: 0.9rem;
+      border-left: 0.9rem solid rgba(118, 191, 48);
+    }
+
+    & .aboutButton {
+      width: 6rem;
+      height: 2rem;
     }
   }
 
