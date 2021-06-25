@@ -21,167 +21,227 @@ const responsive = {
   },
 };
 
-const Main = styled.div`
-  width: 100%;
-  height: 35rem;
-  display: flex;
+const LoanWrapper = styled.div`
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  text-align: center;
+`
 
-  & .title {
-    color: rgba(118, 191, 48, 0.9);
-    margin: 2rem;
-    border-bottom: 0.2rem solid rgba(118, 191, 48, 0.9);
+const Card = styled.div`
+  position: relative;
+  min-width: 320px;
+  height: 440px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  margin: 30px;
+  transition: 0.5s;
+
+  &:nth-child(1) .box .content a {
+    background: #2196f3;
   }
 
-  & .loanWrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    height: 90%;
+  &:nth-child(2) .box .content a {
+    background: #e91e63;
   }
 
-  & .loanCard {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 0.7rem;
-    width: 95%;
-    height: 100%;
-    flex-direction: column;
-  }
-
-  & .cardImg {
-    width: 80%;
-    height: 40%;
-    margin: 0;
-    margin-bottom: -4rem;
-    z-index: 1;
-  }
-
-  & .cardImg img {
-    width: 100%;
-    height: 100%;
-    border-radius: 0.4rem;
-  }
-
-  & .cardDetails {
-    width: 100%;
-    height: 70%;
-    padding: 5rem 1.5rem 1rem 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(118, 191, 48, 0.9);
-    box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
-  }
-
-  & .cardDetails h4 {
-    color: #fff;
-  }
-
-  & .cardDetails p {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-
-  & .cardDetails button {
-    justify-content: center;
-    align-items: center;
-    border: 0.15rem solid #fff;
-    color: #fff;
-    background: transparent;
-    border-radius: 2rem;
-    justify-content: center;
-    align-items: center;
-    padding: 0.4rem;
-    width: 10rem;
+  &:nth-child(3) .box .content a {
+    background: #23c186;
   }
 `;
 
+const Box = styled.div`
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  background: rgb(118, 191, 48);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s;
+
+  &:hover {
+    transform: translateY(-50px);
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    //background: rgba(0, 0, 0, 0.04);
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.04);
+  }
+`;
+
+const Content = styled.div`
+  padding: 20px;
+  text-align: center;
+
+  & h2 {
+    position: absolute;
+    top: -10px;
+    right: 58px;
+    font-size: 8rem;
+    color: rgba(255, 255, 255, 0.2);
+  }
+
+  & h3 {
+    font-size: 1.8rem;
+    color: #fff;
+    z-index: 1;
+    transition: 0.5s;
+    margin-bottom: 15px;
+  }
+
+  & p {
+    font-size: 1rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.9);
+    z-index: 1;
+    transition: 0.5s;
+  }
+
+  & a {
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    background: black;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    margin-top: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+  }
+
+  & a:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+    background: #fff;
+    color: #000;
+  }
+`;
+
+const Title = styled.h2`
+  align-items: center;
+  justify-content: center;
+  color: rgba(118, 191, 48, 0.9);
+  margin: 2rem;
+  border-bottom: 0.2rem solid rgba(118, 191, 48, 0.9);
+`
+
 const Loantypes = () => {
     return (
-      <div>
-        <Main>
-          <h2 className="title">Loans</h2>
-          {/* <Carousel
-            swipeable={false}
-            draggable={false}
-            showDots={true}
-            responsive={responsive}
-            infinite={true}
-            //autoPlay={deviceType !== "mobile" ? true : false}
-            autoPlaySpeed={1000}
-            keyBoardControl={true}
-            customTransition="all .5"
-            transitionDuration={500}
-            containerClass="carousel-container"
-            removeArrowOnDeviceType={["tablet", "mobile"]}
-            //deviceType={this.props.deviceType}
-            dotListClass="custom-dot-list-style"
-            itemClass="carousel-item-padding-40-px"
-          > */}
-            <div className="loanWrapper">
-            <div className="loanCard">
-              <div className="cardImg">
-                <img src="/img/desk9.jpg" />
-              </div>
-              <div className="cardDetails">
-                <h4> Development Loan</h4>
+      <LoanWrapper>
+        <Title>Loans</Title>
+        <Carousel
+          swipeable={false}
+          draggable={false}
+          showDots={true}
+          responsive={responsive}
+          infinite={true}
+          //autoPlay={deviceType !== "mobile" ? true : false}
+          autoPlaySpeed={1000}
+          keyBoardControl={true}
+          customTransition="all .5"
+          transitionDuration={500}
+          containerClass="carousel-container"
+          removeArrowOnDeviceType={["tablet", "mobile"]}
+          //deviceType={this.props.deviceType}
+          dotListClass="custom-dot-list-style"
+          itemClass="carousel-item-padding-40-px"
+          sliderClass=""
+          slidesToSlide={1}
+          swipeable
+          style={{}}
+        >
+          <Card>
+            <Box>
+              <Content>
+                <h2>01</h2>
+                <h3>Development Loan</h3>
                 <p>
-                  You can only take this medium-term loan for investing
-                  purposes.You cannot have more than one credit at a time.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Labore, totam velit? Iure nemo labore inventore?
                 </p>
-                <button>Read More</button>
-              </div>
-            </div>
-            <div className="loanCard md-4">
-              <div className="cardImg">
-                <img src="/img/desk9.jpg" />
-              </div>
-              <div className="cardDetails">
-                <h4>Emergency Loan</h4>
+                <a href="#">Read More</a>
+              </Content>
+            </Box>
+          </Card>
+
+          <Card>
+            <Box>
+              <Content>
+                <h2>02</h2>
+                <h3>Emergency Loan</h3>
                 <p>
-                  You can only take this medium-term loan for investing
-                  purposes.You cannot have mmore than one credit at a time.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Labore, totam velit? Iure nemo labore inventore?
                 </p>
-                <button>Read More</button>
-              </div>
-            </div>
-            <div className="loanCard">
-              <div className="cardImg">
-                <img src="/img/desk9.jpg" />
-              </div>
-              <div className="cardDetails">
-                <h4>Normal Loan</h4>
+                <a href="#">Read More</a>
+              </Content>
+            </Box>
+          </Card>
+
+          <Card>
+            <Box>
+              <Content>
+                <h2>03</h2>
+                <h3>Normal Loan</h3>
                 <p>
-                  You can only take this medium-term loan for investing
-                  purposes.You cannot have mmore than one credit at a time.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Labore, totam velit? Iure nemo labore inventore?
                 </p>
-                <button>Read More</button>
-              </div>
-            </div>
-            <div className="loanCard">
-              <div className="cardImg">
-                <img src="/img/desk9.jpg" />
-              </div>
-              <div className="cardDetails">
-                <h4>Basic Loan</h4>
+                <a href="#">Read More</a>
+              </Content>
+            </Box>
+          </Card>
+
+          <Card>
+            <Box>
+              <Content>
+                <h2>04</h2>
+                <h3>Education Loan</h3>
                 <p>
-                  You can only take this medium-term loan for investing
-                  purposes.You cannot have mmore than one credit at a time.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Labore, totam velit? Iure nemo labore inventore?
                 </p>
-                <button>Read More</button>
-              </div>
-            </div>
-            </div>
-          {/* </Carousel> */}
-        </Main>
-      </div>
+                <a href="#">Read More</a>
+              </Content>
+            </Box>
+          </Card>
+
+          <Card>
+            <Box>
+              <Content>
+                <h2>05</h2>
+                <h3>Asset Finance</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Labore, totam velit? Iure nemo labore inventore?
+                </p>
+                <a href="#">Read More</a>
+              </Content>
+            </Box>
+          </Card>
+        </Carousel>
+      </LoanWrapper>
     );
 }
 

@@ -16,12 +16,12 @@ const Homepage = () => {
     return (
       <>
         <Main>
-          <Header/>
+          <Header />
           <Homeheader />
-          <Sideicons/> 
+          <Sideicons />
           <HomeSectionOne />
           <Loantypes/>
-          <HomeAbout/>
+          <HomeAbout />
           <Footer />
         </Main>
       </>

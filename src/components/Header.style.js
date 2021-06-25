@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import styled from "styled-components";
 import { Animated } from "react-animated-css";
-import { Icon, InlineIcon } from '@iconify/react';
-import threeBars16 from '@iconify-icons/octicon/three-bars-16';
 
 
 const media = {
@@ -21,6 +19,7 @@ const Navwrapper = styled.div`
   grid-template-columns: 20% 80%;
   position: fixed;
   background-color: #fff;
+  box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
 
   & .active {
     background-color: rgb(255, 255, 255);
@@ -168,7 +167,6 @@ const Header = () => {
                 </Link>
               </li>
             </Animated>
-            <Icon icon={threeBars16}/>
           </Nav>
         </Navwrapper>
       </div>

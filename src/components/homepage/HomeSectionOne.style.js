@@ -2,18 +2,17 @@ import React from "react";
 import styled from "styled-components";
 
 const media = {
-  mobile: "@media (min-width: 320px) and (max-width: 480px)",
+  mobile: "@media (max-width: 480px)",
   tablet: "@media (min-width: 481px) and (max-width: 768px)",
   laptop: "@media (min-width: 769px) and (max-width: 1024px)",
-  desktops: "@media (min-width: 1025px) and (max-width: 1200px)",
+  desktop: "@media (min-width: 1025px) and (max-width: 1200px)",
   extralarge: "@media (min-width: 1201px)",
 };
 
 const Main = styled.div`
   width: 100%;
-  height: 30rem;
   display: flex;
-  padding: 2rem;
+  padding: 1rem 2rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -69,10 +68,10 @@ const Main = styled.div`
   }
 
   ${media.mobile} {
-    height: 70rem;
     flex-direction: column;
 
     & .title {
+      margin: 1rem;
     }
 
     & .sectionOneWrapper {
@@ -129,6 +128,14 @@ const Main = styled.div`
       height: 3rem;
       margin: 1rem;
     }
+  }
+
+  ${media.desktop} {
+    height: 30rem;
+  }
+
+  ${media.extralarge} {
+    height: 30rem;
   }
 `;
 
