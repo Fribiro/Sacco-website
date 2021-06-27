@@ -121,20 +121,23 @@ const ContactWrapper = styled.div`
   ${media.mobile} {
     flex-direction: column;
     margin: 2rem 1rem;
-    height: fit-content;
+    height: 70rem;
 
     & .contactBox {
       width: 100%;
+      height: 70%;
     }
 
     & .mapouter {
       width: 100%;
       padding: 0;
+      height: 30%;
     }
 
     & .iconContainer {
       width: 60%;
-      height: 30%;
+      height: 33%;
+      margin-top: 0.8rem;
     }
 
     & #address {
@@ -145,15 +148,22 @@ const ContactWrapper = styled.div`
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      height: 80%;
     }
 
     & .icon {
-      width: 30%;
+      width: 26%;
       height: 50%;
+    }
+
+    #address .icon {
+      width: 26%;
+      height: 35%;
     }
 
     & .details {
       height: 50%;
+      margin-top: 0.9rem;
     }
   }
 
