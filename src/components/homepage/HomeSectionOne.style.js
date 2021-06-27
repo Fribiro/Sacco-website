@@ -25,7 +25,7 @@ const Main = styled.div`
 
   & .sectionOneWrapper {
     display: flex;
-    width: 100%;
+    width: 85%;
     justify-content: center;
     align-items: center;
   }
@@ -76,6 +76,7 @@ const Main = styled.div`
 
     & .sectionOneWrapper {
       flex-direction: column;
+      width: 100%;
     }
 
     & .col {

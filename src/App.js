@@ -4,9 +4,14 @@ import Homepage from './components/homepage/Homepage'
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
-import {  } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBars,
+  faMapMarkerAlt,
+  faPaperPlane,
+  faPhoneAlt,
+} from "@fortawesome/free-solid-svg-icons";
 
-library.add(fab);
+library.add(fab, faBars, faPhoneAlt, faPaperPlane, faMapMarkerAlt);
 
 function App() {
   return (
