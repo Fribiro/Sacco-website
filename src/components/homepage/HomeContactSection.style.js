@@ -158,6 +158,35 @@ const ContactWrapper = styled.div`
   }
 
   ${media.tablet} {
+    flex-direction: column;
+    margin: 2rem 1rem;
+    height: 55rem;
+
+    & .contactBox {
+      width: 100%;
+    }
+
+    & .mapouter {
+      width: 100%;
+      padding: 0;
+    }
+
+    & .iconContainer {
+      width: 60%;
+      height: 100%;
+    }
+
+    & .icon {
+      width: 23%;
+    }
+
+    & #address .icon {
+      width: 34%;
+    }
+
+    & #address .details {
+      padding-top: 2.8rem;
+    }
   }
 `;
 
