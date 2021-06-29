@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-scroll";
 import styled from "styled-components";
-import { Animated } from "react-animated-css";
-
+import { Navbar, Nav, NavDropdown }from "react-bootstrap";
 
 const media = {
   mobile: "@media (min-width: 320px) and (max-width: 480px)",
@@ -13,68 +11,38 @@ const media = {
 };
 
 const Navwrapper = styled.div`
-  display: grid;
-  width: 100%;
-  z-index: 1;
-  grid-template-columns: 20% 80%;
-  position: fixed;
-  background-color: #fff;
   box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
 
-  & .active {
-    background-color: rgb(255, 255, 255);
-    color: rgb(51, 51, 51);
-  }
-`;
-
-const Logo = styled.div`
-  grid-column: 1;
-  grid-row: 1;
-  display: flex;
-  width: 15rem;
-  height: 4.5rem;
-
-  ${media.mobile} {
-    height: 3rem;
-  }
-`
-
-const Nav = styled.ul`
-  margin-top: 0;
-  grid-column: 2;
-  grid-row: 1;
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  justify-content: flex-start;
-  margin-bottom: 0;
-  padding-left: 0;
-  height: 100%;
-  //margin-right: 4rem;
-
-  & li {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    padding: 0 0.6rem;
-    color: #000;
-  }
-
-  & li a {
-    margin: 0 0.7rem;
-    text-decoration: none;
-    align-items: center;
-    width: 100%;
-    position: relative;
+  & .navbar-dark .navbar-nav .nav-link {
+    color: #333;
     font-size: 1rem;
   }
 
-  & li:hover {
+  & .dropdown-toggle:after {
+    display: none;
+  }
+
+  & .navbar-dark .navbar-brand {
+    padding: 0;
+  }
+
+  & div#responsive-navbar-nav {
+    margin-left: 4rem;
+  }
+
+  & .dropdown-menu.show {
+    margin-top: 2rem;
+    border-radius: 0;
+  }
+
+  ${media.laptop} {
+  }
+  & a.nav-link:hover {
     cursor: pointer;
     color: #76bf30;
   }
 
-  & li a:after {
+  & .nav-link:after {
     content: "";
     position: absolute;
     width: 100%;
@@ -86,25 +54,9 @@ const Nav = styled.ul`
     transition: 0.5s;
   }
 
-  & li a:hover::after {
+  & a.nav-link:hover::after {
     transform: scaleX(1);
     transform-origin: center;
-  }
-
-  ${media.mobile} {
-    display: none;
-    flex-direction: column;
-    background-color: #76bf30;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 1rem 0;
-    right: 0;
-    height: 3rem;
-
-    & li {
-      padding: 1rem;
-    }
   }
 `;
 
@@ -112,64 +64,62 @@ const Header = () => {
 
   return (
     <div>
-      <div>
-        <Navwrapper>
-          <Logo>
-            <img src="uniqlogo.png"></img>
-          </Logo>
-          <Nav className=" ">
-            <Animated
-              animationIn="slideInRight"
-              animationInDelay="0s"
-              isVisible={true}
-            >
-              <li className="">
-                <Link
-                  className=""
-                  aria-current="page"
-                  activeclassName="active"
-                  to="home"
-                  spy={true}
-                  smooth={true}
-                >
-                  Home
-                </Link>
-              </li>
-            </Animated>
-            <Animated animationIn="slideInRight" animationInDelay=".5s">
-              <li className="">
-                <Link className="" to="about" spy={true} smooth={true}>
-                  About
-                </Link>
-              </li>
-            </Animated>
-
-            <Animated
-              animationIn="slideInRight"
-              animationInDelay="1.5s"
-              isVisible={true}
-            >
-              <li className="">
-                <Link className="" to="services" spy={true} smooth={true}>
-                  Services
-                </Link>
-              </li>
-            </Animated>
-
-            <Animated
-              animationIn="slideInRight"
-              animationInDelay="2s"
-              isVisible={true}
-            >
-              <li className="">
-                <Link className="" to="portfolio" spy={true} smooth={true}>
-                  Contacts
-                </Link>
-              </li>
-            </Animated>
-          </Nav>
-        </Navwrapper>
-      </div>
+      <Navwrapper>
+        
+        <Navbar collapseOnSelect expand="lg" bg="white" variant="dark">
+          <Navbar.Brand href="#home">
+            <img
+              src="uniqlogo.png"
+              style={{ width: "6rem", height: "3.5rem" }}
+            ></img>
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="mr-auto">
+              <Nav.Link href="/">Home</Nav.Link>
+              <Nav.Link href="about">About</Nav.Link>
+              <NavDropdown
+                title="Savings Products"
+                id="collasible-nav-dropdown"
+              >
+                <NavDropdown.Item href="savings-products">
+                  Savings Products
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.2">
+                  Another action
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">
+                  Something
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="#action/3.4">
+                  Separated link
+                </NavDropdown.Item>
+              </NavDropdown>
+              <NavDropdown title="Loan Products" id="collasible-nav-dropdown">
+                <NavDropdown.Item href="normal-loan">
+                  Normal Loan
+                </NavDropdown.Item>
+                <NavDropdown.Item href="education-loan">
+                  Education Loan
+                </NavDropdown.Item>
+                <NavDropdown.Item href="asset-finance">
+                  Asset Finance
+                </NavDropdown.Item>
+                <NavDropdown.Item href="development-loan">
+                  Development Loan
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="emergency-loan">
+                  Emergency Loan
+                </NavDropdown.Item>
+              </NavDropdown>
+              <Nav.Link href="loan-calculator">Loan Calculator</Nav.Link>
+              <Nav.Link href="contacts">Contacts</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
+      </Navwrapper>
     </div>
   );
 };

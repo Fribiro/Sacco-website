@@ -40,7 +40,7 @@ const Main = styled.div`
     box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
   }
 
-  & .col h2 {
+  & .col h3 {
     font-weight: 500;
     color: rgba(118, 191, 48, 0.9);
   }
@@ -49,6 +49,7 @@ const Main = styled.div`
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-size: .9rem;
   }
 
   & .icons {
@@ -114,7 +115,7 @@ const Main = styled.div`
       box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
     }
 
-    & .col h2 {
+    & .col h3 {
       font-weight: 500;
       font-size: 1.2rem;
       color: rgba(118, 191, 48, 0.9);
@@ -144,15 +145,15 @@ const HomeSectionOne = () => {
     return (
       <>
         <Main>
-          <h2 className="title">Why Us</h2>
+          <h3 className="title">Why Us</h3>
           <div className="sectionOneWrapper">
             <div className="col cardOne">
               <div className="icons">
                 <img src="/icons/transparency.png" />
               </div>
-              <h2>Transparency</h2>
+              <h3>Transparency</h3>
               <p>
-                Uniq Sacco is one of the accredited saccos found within Nairobi
+                Unik Sacco is one of the accredited saccos found within Nairobi
                 that has been established under strict adherance to the Kenyan
                 Laws.Save with us, get loans and grow with us.
               </p>
@@ -161,9 +162,9 @@ const HomeSectionOne = () => {
               <div className="icons">
                 <img src="/icons/clipboard.png" />
               </div>
-              <h2>Accountability</h2>
+              <h3>Accountability</h3>
               <p>
-                Uniq Sacco is one of the accredited saccos found within Nairobi
+                Unik Sacco is one of the accredited saccos found within Nairobi
                 that has been established under strict adherance to the Kenyan
                 Laws.Save with us, get loans and grow with us.
               </p>
@@ -172,24 +173,13 @@ const HomeSectionOne = () => {
               <div className="icons">
                 <img src="/icons/graph.png" />
               </div>
-              <h2>Growth</h2>
+              <h3>Growth</h3>
               <p>
-                Uniq Sacco is one of the accredited saccos found within Nairobi
+                Unik Sacco is one of the accredited saccos found within Nairobi
                 that has been established under strict adherance to the Kenyan
                 Laws.Save with us, get loans and grow with us.
               </p>
             </div>
-            {/* <div className="col cardFour">
-              <div className="icons">
-                <img src="/icons/group.png" />
-              </div>
-              <h2>Participation</h2>
-              <p>
-                Uniq Sacco is one of the accredited saccos found within Nairobi
-                that has been established under strict adherance to the Kenyan
-                Laws.Save with us, get loans and grow with us.
-              </p>
-            </div> */}
           </div>
         </Main>
       </>

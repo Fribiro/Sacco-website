@@ -169,6 +169,8 @@ const Footerwrapper = styled.div`
   & .segment-four form input[type="email"] {
     grid-column: 1;
     grid-row: 1;
+    outline: none;
+    padding-left: .5rem;
   }
 
   & .segment-four form input[type="submit"] {

@@ -11,6 +11,8 @@ import {
   faPhoneAlt,
 } from "@fortawesome/free-solid-svg-icons";
 
+import Contact from './components/contacts/Contact';
+
 library.add(fab, faBars, faPhoneAlt, faPaperPlane, faMapMarkerAlt);
 
 function App() {
@@ -19,6 +21,7 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/" component={Homepage} />
+          <Route exact path="/contacts" component={Contact} />
         </Switch>
       </Router>
     </div>
