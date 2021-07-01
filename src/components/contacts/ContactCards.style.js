@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const media = {
   mobile: "@media (max-width: 480px)",
@@ -184,9 +185,9 @@ const ContactCards = () => {
             <div className="col1">
               <div className="col cardOne">
                 <div className="icons">
-                  <img src="/icons/transparency.png" />
+                  <FontAwesomeIcon icon="map-marker-alt" />
                 </div>
-                <h3>Transparency</h3>
+                <h3>Phone</h3>
                 <p>
                   Unik Sacco is one of the accredited saccos found within
                   Nairobi that has been established under strict adherance to
@@ -197,9 +198,9 @@ const ContactCards = () => {
             <div className="col2">
               <div className="col cardTwo">
                 <div className="icons">
-                  <img src="/icons/clipboard.png" />
+                  <FontAwesomeIcon icon="phone-alt" />
                 </div>
-                <h3>Accountability</h3>
+                <h3>Address</h3>
                 <p>
                   Unik Sacco is one of the accredited saccos found within
                   Nairobi that has been established under strict adherance to
@@ -222,9 +223,9 @@ const ContactCards = () => {
             <div className="col3">
               <div className="col cardFour">
                 <div className="icons">
-                  <img src="/icons/graph.png" />
+                  <FontAwesomeIcon icon="paper-plane" />
                 </div>
-                <h3>Growth</h3>
+                <h3>Email</h3>
                 <p>
                   Unik Sacco is one of the accredited saccos found within
                   Nairobi that has been established under strict adherance to

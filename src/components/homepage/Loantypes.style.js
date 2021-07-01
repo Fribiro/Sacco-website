@@ -138,18 +138,26 @@ const Content = styled.div`
   }
 `;
 
-const Title = styled.h2`
+const Title = styled.div`
+  display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(118, 191, 48, 0.9);
-  margin: 2rem;
-  border-bottom: 0.2rem solid rgba(118, 191, 48, 0.9);
-`
+
+  & h2 {
+    align-items: center;
+    justify-content: center;
+    color: rgba(118, 191, 48, 0.9);
+    margin: 2rem;
+    border-bottom: 0.2rem solid rgba(118, 191, 48, 0.9);
+  }
+`;
 
 const Loantypes = () => {
     return (
       <LoanWrapper>
-        <Title>Loans</Title>
+        <Title>
+          <h2>Loans</h2>
+        </Title>
         <Carousel
           swipeable={false}
           draggable={false}
