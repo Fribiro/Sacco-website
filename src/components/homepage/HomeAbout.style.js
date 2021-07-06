@@ -34,6 +34,10 @@ const Main = styled.div`
     background: url("/img/desk8.jpg") no-repeat center / cover;
   }
 
+  & .content h2 {
+    font-family: "Abril Fatface", cursive;
+  }
+
   & .aboutRightSection {
     width: 50%;
     height: 64%;
@@ -60,7 +64,7 @@ const Main = styled.div`
 
   ${media.mobile} {
     margin: 2rem 0;
-    
+
     & .aboutWrapper {
       flex-direction: column;
       width: 100%;

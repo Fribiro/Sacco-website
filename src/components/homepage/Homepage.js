@@ -8,6 +8,9 @@ import HomeAbout from "./HomeAbout.style";
 import Loantypes from "./Loantypes.style";
 import Header from "../Header.style";
 import HomeContactSection from "./HomeContactSection.style";
+import UnikCounter from "./UnikCounter.style";
+import Testimonials from "./Testimonials.style";
+import Partners from "./Partners.style";
 
 const Main = styled.div`
     overflow-x: hidden;
@@ -21,8 +24,11 @@ const Homepage = () => {
           <Homeheader />
           <Sideicons />
           <HomeSectionOne />
+          <UnikCounter/>
           <Loantypes/>
           <HomeAbout />
+          <Testimonials/>
+          <Partners/>
           <HomeContactSection/>
           <Footer />
         </Main>

@@ -145,10 +145,19 @@ const Title = styled.div`
 
   & h2 {
     align-items: center;
+    font-family: "Abril Fatface", cursive;
     justify-content: center;
     color: rgba(118, 191, 48, 0.9);
     margin: 2rem;
-    border-bottom: 0.2rem solid rgba(118, 191, 48, 0.9);
+  }
+
+  & h2::after {
+    content: "";
+    background: rgba(118, 191, 48, 0.9);
+    display: block;
+    height: 0.2rem;
+    width: 4rem;
+    margin: 7px auto 5px;
   }
 `;
 
@@ -159,23 +168,23 @@ const Loantypes = () => {
           <h2>Loans</h2>
         </Title>
         <Carousel
-          swipeable={false}
+          swipeable
           draggable={false}
-          showDots={true}
+          showDots={false}
           responsive={responsive}
           infinite={true}
-          //autoPlay={deviceType !== "mobile" ? true : false}
+          autoPlay={true}
           autoPlaySpeed={1000}
           keyBoardControl={true}
           customTransition="all .5"
-          transitionDuration={500}
+          transitionDuration={1000}
           containerClass="carousel-container"
           removeArrowOnDeviceType={["tablet", "mobile"]}
           //deviceType={this.props.deviceType}
           dotListClass="custom-dot-list-style"
           itemClass="carousel-item-padding-40-px"
           sliderClass=""
-          slidesToSlide={1}
+          slidesToSlide={3}
           swipeable
           style={{}}
         >

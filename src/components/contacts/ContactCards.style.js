@@ -10,6 +10,40 @@ const media = {
   extralarge: "@media (min-width: 1201px)",
 };
 
+const Contactheader = styled.div`
+  height: 70vh;
+  width: 100%;
+  background: URL("/img/desk7.jpg");
+  filter: brightness(90%);
+  -webkit-filter: brightness(90%);
+  background: no repeat center center scroll;
+  -webkit-background-size: cover;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & .headerText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 40%;
+  }
+
+  & .headerText h2 {
+    font-family: "Abril Fatface", cursive;
+    color: rgba(118, 191, 48, 0.9);
+  }
+
+  & .headerText p {
+    text-align: center;
+    font-size: 1.4rem;
+    font-family: "Crimson Text", serif;
+    color: #fff;
+  }
+`;
+
 const Main = styled.div`
   width: 100%;
   display: flex;
@@ -21,7 +55,8 @@ const Main = styled.div`
 
   & .title {
     color: rgba(118, 191, 48, 0.9);
-    margin: 2rem;
+    font-family: "Abril Fatface", cursive;
+    margin: 2rem 2rem 0 2rem;
     border-bottom: 0.2rem solid rgba(118, 191, 48, 0.9);
   }
 
@@ -59,7 +94,7 @@ const Main = styled.div`
 
   & .cardTwo,
   .cardThree {
-    border-top: 0.4rem solid rgba(0, 0, 0, 0.9);
+    border-top: 0.4rem solid rgba(0, 0, 0, 0.8);
   }
 
   & .col,
@@ -93,7 +128,9 @@ const Main = styled.div`
   & .icons {
     width: 4rem;
     height: 4rem;
-    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   & svg {
@@ -101,9 +138,10 @@ const Main = styled.div`
     height: 100%;
   }
 
-  & .icons img {
-    width: 100%;
-    height: 100%;
+  & .icons svg {
+    width: 50%;
+    height: 50%;
+    //color: rgba(118, 191, 48, 0.9);
   }
 
   ${media.mobile} {
@@ -172,15 +210,49 @@ const Main = styled.div`
   }
 
   ${media.extralarge} {
-    height: 50rem;
+    height: 40rem;
+  }
+`;
+
+const Title = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & h2 {
+    align-items: center;
+    font-family: "Abril Fatface", cursive;
+    justify-content: center;
+    color: rgba(118, 191, 48, 0.9);
+    margin: 2rem;
+  }
+
+  & h2::after {
+    content: "";
+    background: rgba(118, 191, 48, 0.9);
+    display: block;
+    height: 0.2rem;
+    width: 10rem;
+    margin: 7px auto 5px;
   }
 `;
 
 const ContactCards = () => {
     return (
       <div>
+        <Contactheader>
+          <div className="headerText">
+            <h2>Contact Us</h2>
+            <p>
+              Our lines are always active with our esteemed staff ready to pick
+              and help you out with all of you needs.
+            </p>
+          </div>
+        </Contactheader>
         <Main>
-          <h3 className="title">Contact Us</h3>
+          <Title>
+            <h2 className="title">Contacts</h2>
+          </Title>
           <div className="sectionOneWrapper">
             <div className="col1">
               <div className="col cardOne">
@@ -188,11 +260,7 @@ const ContactCards = () => {
                   <FontAwesomeIcon icon="map-marker-alt" />
                 </div>
                 <h3>Phone</h3>
-                <p>
-                  Unik Sacco is one of the accredited saccos found within
-                  Nairobi that has been established under strict adherance to
-                  the Kenyan Laws.Save with us, get loans and grow with us.
-                </p>
+                <p>+25411097567</p>
               </div>
             </div>
             <div className="col2">
@@ -201,23 +269,15 @@ const ContactCards = () => {
                   <FontAwesomeIcon icon="phone-alt" />
                 </div>
                 <h3>Address</h3>
-                <p>
-                  Unik Sacco is one of the accredited saccos found within
-                  Nairobi that has been established under strict adherance to
-                  the Kenyan Laws.Save with us, get loans and grow with us.
-                </p>
+                <p>Blessed House, 2nd floor, Rm 212, Thika RD</p>
               </div>
 
               <div className="col cardThree">
                 <div className="icons">
-                  <img src="/icons/graph.png" />
+                  <FontAwesomeIcon icon="phone-alt" />
                 </div>
-                <h3>Growth</h3>
-                <p>
-                  Unik Sacco is one of the accredited saccos found within
-                  Nairobi that has been established under strict adherance to
-                  the Kenyan Laws.Save with us, get loans and grow with us.
-                </p>
+                <h3>Telephone Lines</h3>
+                <p>0205762389</p>
               </div>
             </div>
             <div className="col3">
@@ -226,11 +286,7 @@ const ContactCards = () => {
                   <FontAwesomeIcon icon="paper-plane" />
                 </div>
                 <h3>Email</h3>
-                <p>
-                  Unik Sacco is one of the accredited saccos found within
-                  Nairobi that has been established under strict adherance to
-                  the Kenyan Laws.Save with us, get loans and grow with us.
-                </p>
+                <p>info@unique.co.ke</p>
               </div>
             </div>
           </div>

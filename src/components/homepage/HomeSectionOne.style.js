@@ -17,11 +17,10 @@ const Main = styled.div`
   justify-content: center;
   align-items: center;
 
-  & .title {
+  /* & .title {
     color: rgba(118, 191, 48, 0.9);
     margin: 2rem;
-    border-bottom: 0.2rem solid rgba(118, 191, 48, 0.9);
-  }
+  } */
 
   & .sectionOneWrapper {
     display: flex;
@@ -141,11 +140,36 @@ const Main = styled.div`
   }
 `;
 
+const Title = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & h2 {
+    align-items: center;
+    font-family: "Abril Fatface", cursive;
+    justify-content: center;
+    color: rgba(118, 191, 48, 0.9);
+    margin: 2rem;
+  }
+
+  & h2::after {
+    content: "";
+    background: rgba(118, 191, 48, 0.9);
+    display: block;
+    height: 0.2rem;
+    width: 4rem;
+    margin: 7px auto 5px;
+  }
+`
+
 const HomeSectionOne = () => {
     return (
       <>
         <Main>
-          <h3 className="title">Why Us</h3>
+          <Title>
+            <h2 className="title">Why Us</h2>
+          </Title>
           <div className="sectionOneWrapper">
             <div className="col cardOne">
               <div className="icons">

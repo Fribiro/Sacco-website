@@ -9,11 +9,31 @@ import {
   faMapMarkerAlt,
   faPaperPlane,
   faPhoneAlt,
+  faUsers,
+  faHandshake,
+  faHandsHelping,
+  faHistory,
+  faGift,
+  faLandmark,
+  faUser,
 } from "@fortawesome/free-solid-svg-icons";
 
 import Contact from './components/contacts/Contact';
 
-library.add(fab, faBars, faPhoneAlt, faPaperPlane, faMapMarkerAlt);
+library.add(
+  fab,
+  faBars,
+  faPhoneAlt,
+  faPaperPlane,
+  faMapMarkerAlt,
+  faUsers,
+  faHandshake,
+  faHandsHelping,
+  faHistory,
+  faGift,
+  faLandmark,
+  faUser,
+);
 
 function App() {
   return (

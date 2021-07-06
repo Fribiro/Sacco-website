@@ -12,6 +12,8 @@ const media = {
 };
 
 const Navwrapper = styled.div`
+  //position: fixed;
+  width: 100%;
   box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
 
   & .navbar-dark .navbar-nav .nav-link {
@@ -159,11 +161,6 @@ const Header = () => {
               <li class="nav-item active">
                 <Link class="nav-link" to="/">
                   Home <span class="sr-only">(current)</span>
-                </Link>
-              </li>
-              <li class="nav-item">
-                <Link class="nav-link" href="#">
-                  Features
                 </Link>
               </li>
               <li class="nav-item">
