@@ -89,12 +89,14 @@ const ContactWrapper = styled.div`
     flex-direction: column;
   }
 
-  & .details p {
-    font-size: 0.9rem;
+  & .details h5 {
+    font-family: "Crimson Text", serif;
+    font-weight: bold;
   }
 
   & .details p {
-    font-size: 0.9rem;
+    font-size: 1rem;
+    font-family: "Crimson Text", serif;
   }
 
   & .comment {
@@ -116,6 +118,17 @@ const ContactWrapper = styled.div`
     border: none;
     padding: 0.4rem 1rem;
     outline: none;
+  }
+
+  & input[type="submit"] {
+    font-family: "Crimson Text", serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  & ::placeholder {
+    font-family: "Crimson Text", serif;
+    font-size: 1.2rem;
   }
 
   ${media.mobile} {
@@ -211,7 +224,7 @@ const HomeContactSection = () => {
                 <FontAwesomeIcon icon="map-marker-alt" />
               </div>
               <div className="details">
-                <h6>Address</h6>
+                <h5>Address</h5>
                 <p>Blessed House, 2nd floor, Rm 212, Thika RD</p>
               </div>
             </div>
@@ -220,7 +233,7 @@ const HomeContactSection = () => {
                 <FontAwesomeIcon icon="phone-alt" />
               </div>
               <div className="details">
-                <h6>Phone</h6>
+                <h5>Phone</h5>
                 <p>+25411188976</p>
               </div>
             </div>
@@ -229,7 +242,7 @@ const HomeContactSection = () => {
                 <FontAwesomeIcon icon="paper-plane" />
               </div>
               <div className="details">
-                <h6>Email</h6>
+                <h5>Email</h5>
                 <p>info@unique.co.ke</p>
               </div>
             </div>

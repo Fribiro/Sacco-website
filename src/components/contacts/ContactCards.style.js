@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Tooltip from "@material-ui/core/Tooltip";
 
 const media = {
   mobile: "@media (max-width: 480px)",
@@ -57,7 +58,6 @@ const Main = styled.div`
     color: rgba(118, 191, 48, 0.9);
     font-family: "Abril Fatface", cursive;
     margin: 2rem 2rem 0 2rem;
-    border-bottom: 0.2rem solid rgba(118, 191, 48, 0.9);
   }
 
   & .sectionOneWrapper {
@@ -89,12 +89,12 @@ const Main = styled.div`
 
   & .cardOne,
   .cardFour {
-    border-top: 0.4rem solid rgba(118, 191, 48, 0.9);
+    border-top: 0.4rem solid rgba(0, 0, 0, 0.6);
   }
 
   & .cardTwo,
   .cardThree {
-    border-top: 0.4rem solid rgba(0, 0, 0, 0.8);
+    border-top: 0.4rem solid rgba(0, 0, 0, 0.6);
   }
 
   & .col,
@@ -106,23 +106,36 @@ const Main = styled.div`
     justify-content: space-between;
   }
 
+  & .col1,
+  .col3 {
+    height: 17rem;
+  }
+
+  & .cardOne,
+  .cardFour {
+    height: 80%;
+  }
+
   & .cardOne h3,
   .cardFour h3 {
-    font-weight: 500;
-    color: rgba(0, 0, 0, 0.9);
+    font-weight: bold;
+    color: rgba(118, 191, 48, 0.9);
+    font-family: "Crimson Text", serif;
   }
 
   & .cardTwo h3,
   .cardThree h3 {
-    font-weight: 500;
+    font-weight: bold;
     color: rgba(118, 191, 48, 0.9);
+    font-family: "Crimson Text", serif;
   }
 
   & .col p {
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 1rem;
+    font-family: "Crimson Text", serif;
   }
 
   & .icons {
@@ -141,7 +154,7 @@ const Main = styled.div`
   & .icons svg {
     width: 50%;
     height: 50%;
-    //color: rgba(118, 191, 48, 0.9);
+    color: rgba(118, 191, 48, 0.9);
   }
 
   ${media.mobile} {
@@ -210,7 +223,7 @@ const Main = styled.div`
   }
 
   ${media.extralarge} {
-    height: 40rem;
+    height: 30rem;
   }
 `;
 
@@ -232,7 +245,7 @@ const Title = styled.div`
     background: rgba(118, 191, 48, 0.9);
     display: block;
     height: 0.2rem;
-    width: 10rem;
+    width: 6rem;
     margin: 7px auto 5px;
   }
 `;
@@ -257,36 +270,43 @@ const ContactCards = () => {
             <div className="col1">
               <div className="col cardOne">
                 <div className="icons">
-                  <FontAwesomeIcon icon="map-marker-alt" />
+                  <FontAwesomeIcon icon="phone-alt" />
                 </div>
                 <h3>Phone</h3>
-                <p>+25411097567</p>
+                <p>
+                  +254 792 767 676 <br /> +254 721 540 078
+                </p>
               </div>
             </div>
             <div className="col2">
               <div className="col cardTwo">
                 <div className="icons">
-                  <FontAwesomeIcon icon="phone-alt" />
+                  <Tooltip title="Click to open map" arrow>
+                    <FontAwesomeIcon icon="map-marker-alt" cursor="pointer"/>
+                  </Tooltip>
                 </div>
                 <h3>Address</h3>
-                <p>Blessed House, 2nd floor, Rm 212, Thika RD</p>
+                <p>
+                  Blessed House, 2nd Floor Wing A Office 212, opposite Garden
+                  City Mall, Thika RD <br /> P.O. Box 716-00618
+                </p>
               </div>
 
-              <div className="col cardThree">
+              {/* <div className="col cardThree">
                 <div className="icons">
                   <FontAwesomeIcon icon="phone-alt" />
                 </div>
                 <h3>Telephone Lines</h3>
                 <p>0205762389</p>
-              </div>
+              </div> */}
             </div>
             <div className="col3">
               <div className="col cardFour">
                 <div className="icons">
-                  <FontAwesomeIcon icon="paper-plane" />
+                  <FontAwesomeIcon icon="envelope" />
                 </div>
                 <h3>Email</h3>
-                <p>info@unique.co.ke</p>
+                <p>enquiries@uniquetracking.co.ke</p>
               </div>
             </div>
           </div>

@@ -16,6 +16,7 @@ import {
   faGift,
   faLandmark,
   faUser,
+  faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 
 import Contact from './components/contacts/Contact';
@@ -33,6 +34,7 @@ library.add(
   faGift,
   faLandmark,
   faUser,
+  faEnvelope,
 );
 
 function App() {
