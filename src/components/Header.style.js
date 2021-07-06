@@ -119,7 +119,7 @@ const Header = () => {
     <div>
       <Navwrapper>
         {/* <Navbar collapseOnSelect expand="lg" bg="white" variant="dark">
-          <Navbar.Brand href="#home">
+          <Navbar.Brand to="#home">
             <img
               src="uniqlogo.png"
               style={{ width: "6rem", height: "3.5rem" }}
@@ -128,51 +128,51 @@ const Header = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav navbar-light" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="about">About</Nav.Link>
+              <Nav.Link to="/">Home</Nav.Link>
+              <Nav.Link to="about">About</Nav.Link>
               <NavDropdown
                 title="Savings Products"
                 id="collasible-nav-dropdown"
               >
-                <NavDropdown.Item href="savings-products">
+                <NavDropdown.Item to="savings-products">
                   Savings Products
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
+                <NavDropdown.Item to="#action/3.2">
                   Another action
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
+                <NavDropdown.Item to="#action/3.3">
                   Something
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
+                <NavDropdown.Item to="#action/3.4">
                   Separated link
                 </NavDropdown.Item>
               </NavDropdown>
               <NavDropdown title="Loan Products" id="collasible-nav-dropdown">
-                <NavDropdown.Item href="normal-loan">
+                <NavDropdown.Item to="normal-loan">
                   Normal Loan
                 </NavDropdown.Item>
-                <NavDropdown.Item href="education-loan">
+                <NavDropdown.Item to="education-loan">
                   Education Loan
                 </NavDropdown.Item>
-                <NavDropdown.Item href="asset-finance">
+                <NavDropdown.Item to="asset-finance">
                   Asset Finance
                 </NavDropdown.Item>
-                <NavDropdown.Item href="development-loan">
+                <NavDropdown.Item to="development-loan">
                   Development Loan
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="emergency-loan">
+                <NavDropdown.Item to="emergency-loan">
                   Emergency Loan
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="loan-calculator">Loan Calculator</Nav.Link>
-              <Nav.Link href="contacts">Contacts</Nav.Link>
+              <Nav.Link to="loan-calculator">Loan Calculator</Nav.Link>
+              <Nav.Link to="contacts">Contacts</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar> */}
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <Link class="navbar-brand" href="#">
+          <Link class="navbar-brand" to="#">
             <img src="uniqlogo.png"></img>
           </Link>
           <button
@@ -197,14 +197,14 @@ const Header = () => {
                 </Link>
               </li>
               <li class="nav-item">
-                <Link class="nav-link" href="#">
+                <Link class="nav-link" to="#">
                   About
                 </Link>
               </li>
               <li class="nav-item dropdown">
                 <Link
                   class="nav-link dropdown-toggle"
-                  href="#"
+                  to="#"
                   id="navbarDropdownMenuLink"
                   data-toggle="dropdown"
                   aria-haspopup="true"
@@ -216,13 +216,13 @@ const Header = () => {
                   class="dropdown-menu"
                   aria-labelledby="navbarDropdownMenuLink"
                 >
-                  <Link class="dropdown-item" href="#">
+                  <Link class="dropdown-item" to="#">
                     Action
                   </Link>
-                  <Link class="dropdown-item" href="#">
+                  <Link class="dropdown-item" to="#">
                     Another action
                   </Link>
-                  <Link class="dropdown-item" href="#">
+                  <Link class="dropdown-item" to="#">
                     Something else here
                   </Link>
                 </div>
@@ -230,7 +230,7 @@ const Header = () => {
               <li class="nav-item dropdown">
                 <Link
                   class="nav-link dropdown-toggle"
-                  href="#"
+                  to="#"
                   id="navbarDropdownMenuLink"
                   data-toggle="dropdown"
                   aria-haspopup="true"
@@ -242,25 +242,25 @@ const Header = () => {
                   class="dropdown-menu"
                   aria-labelledby="navbarDropdownMenuLink"
                 >
-                  <Link class="dropdown-item" href="#">
+                  <Link class="dropdown-item" to="#">
                     Normal Loan
                   </Link>
-                  <Link class="dropdown-item" href="#">
+                  <Link class="dropdown-item" to="#">
                     Education Loan
                   </Link>
-                  <Link class="dropdown-item" href="#">
+                  <Link class="dropdown-item" to="#">
                     Asset Finance
                   </Link>
-                  <Link class="dropdown-item" href="#">
+                  <Link class="dropdown-item" to="#">
                     Development Loan
                   </Link>
-                  <Link class="dropdown-item" href="#">
+                  <Link class="dropdown-item" to="#">
                     Emergency Loan
                   </Link>
                 </div>
               </li>
               <li class="nav-item">
-                <Link class="nav-link" href="#">
+                <Link class="nav-link" to="loan-calculator">
                   Loan Calculator
                 </Link>
               </li>

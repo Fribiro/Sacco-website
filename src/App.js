@@ -20,6 +20,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import Contact from './components/contacts/Contact';
+import Loancalculator from './components/loancalculator/Loancalculator';
 
 library.add(
   fab,
@@ -44,6 +45,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Homepage} />
           <Route exact path="/contacts" component={Contact} />
+          <Route exact path="/loan-calculator" component={Loancalculator} />
         </Switch>
       </Router>
     </div>
