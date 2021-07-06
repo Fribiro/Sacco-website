@@ -25,6 +25,10 @@ const LoanWrapper = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
+
+  & button.react-multiple-carousel__arrow {
+    z-index: 1;
+  }
 `
 
 const Card = styled.div`

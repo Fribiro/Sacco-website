@@ -12,9 +12,35 @@ const media = {
 };
 
 const Navwrapper = styled.div`
-  //position: fixed;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  background-color: #f8f9fa !important;
   width: 100%;
   box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+
+  & .navbar {
+    padding: 0rem 1rem 0;
+  }
+
+  & a.navbar-brand {
+    width: 11rem;
+    height: 4.6rem;
+    padding: 0;
+  }
+  & #navbarNavDropdown {
+    margin-left: 3rem;
+  }
+  & .navbar-brand img {
+    margin-right: 0.25rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  & a.nav-link {
+    text-transform: capitalize;
+  }
 
   & .navbar-dark .navbar-nav .nav-link {
     color: #333;
@@ -52,14 +78,21 @@ const Navwrapper = styled.div`
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
   }
 
-  ${media.laptop} {
+  & li.nav-item {
+    position: relative;
   }
-  /* & a.nav-link:hover {
+
+  & li.nav-item a.nav-link:hover {
     cursor: pointer;
     color: #76bf30;
   }
 
-  & .nav-link:after {
+  & li.nav-item a.nav-link:focus {
+    cursor: pointer;
+    color: #76bf30;
+  }
+
+  & .nav-item::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -71,10 +104,13 @@ const Navwrapper = styled.div`
     transition: 0.5s;
   }
 
-  & a.nav-link:hover::after {
+  & .nav-item:hover::after {
     transform: scaleX(1);
     transform-origin: center;
-  } */
+  }
+
+  ${media.laptop} {
+  }
 `;
 
 const Header = () => {
@@ -137,10 +173,7 @@ const Header = () => {
         </Navbar> */}
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <Link class="navbar-brand" href="#">
-            <img
-              src="uniqlogo.png"
-              style={{ width: "6rem", height: "3.5rem" }}
-            ></img>
+            <img src="uniqlogo.png"></img>
           </Link>
           <button
             class="navbar-toggler"

@@ -11,22 +11,27 @@ const media = {
 };
 
 const Headerhome = styled.div`
-  height: 100vh;
+  height: 89vh;
+  margin-top: 11vh;
   width: 100%;
   position: relative;
 
   & .carousel.slide.carousel-fade {
-    height: 88vh;
+    height: 89vh;
   }
 
   & img.d-block.w-100 {
-    height: 88vh;
+    height: 89vh;
     object-fit: cover;
-    filter: brightness(60%);
+    filter: brightness(50%);
   }
 
   & .carousel-caption {
     bottom: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
   & .carousel-caption h1 {
