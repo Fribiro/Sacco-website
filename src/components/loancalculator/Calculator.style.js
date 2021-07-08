@@ -48,7 +48,7 @@ const Calc = styled.div`
     text-align: center;
     flex-wrap: wrap;
     flex-direction: column;
-    background: URL("/img/footer.jpg");
+    background: URL("/img/woodenbridge.jpg");
     background: no repeat center center scroll;
     backdrop-filter: brightness(40%);
     -webkit-background-size: cover;
@@ -144,6 +144,7 @@ const Calculator = () => {
     const [duration , setDuration] = useState("")
     const [monthlyPayment, setMonthlyPayment] = useState("")
     const [totalPayment, setTotalPayment] = useState("");
+    const [totalInterest, setTotalInterest] = useState("");
 
     const submitCalculation = (e) => {
       e.preventDefault()
@@ -154,7 +155,13 @@ const Calculator = () => {
       //A = P(1 + r/n)^nt
 
       const totalPayment = (principal * Math.pow((1 + (interest/(12*100))), (12 * duration)));
-      
+
+      const totalInterest = totalPayment - principal;
+
+      const monthlyPayment = totalPayment/(12 * duration);
+
+      setMonthlyPayment(monthlyPayment.toFixed(2));
+      setTotalInterest(totalInterest.toFixed(2));
       setTotalPayment(totalPayment.toFixed(2));
     }
 
@@ -174,7 +181,7 @@ const Calculator = () => {
                   </div>
                   <div className="output-group">
                     <h4>Interest to be paid</h4>
-                    <h5>Ksh{interest}</h5>
+                    <h5>Ksh{totalInterest}</h5>
                   </div>
                   <div className="output-group">
                     <h4>Total Repayment</h4>
@@ -210,9 +217,15 @@ const Calculator = () => {
                     onChange={(e) => setDuration(e.target.value)}
                   />
                 </div>
-                {/* <div className="input-group">
-                  <input type="button" value="Calculate" onClick={(e) => {calculateLoan()}}/>
-                </div> */}
+                <div className="input-group">
+                  <input
+                    type="button"
+                    value="Calculate"
+                    onClick={(e) => {
+                      calculateLoan();
+                    }}
+                  />
+                </div>
               </div>
             </div>
           </Calc>
