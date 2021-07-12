@@ -117,9 +117,10 @@ const Content = styled.div`
   & p {
     font-size: 1rem;
     font-weight: 300;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(0, 0, 0, 0.9);
     z-index: 1;
     transition: 0.5s;
+    text-align: center;
   }
 
   & a {
@@ -177,7 +178,7 @@ const Loantypes = () => {
           showDots={false}
           responsive={responsive}
           infinite={true}
-          autoPlay={true}
+          //autoPlay={true}
           autoPlaySpeed={1000}
           keyBoardControl={true}
           customTransition="all .5"
@@ -198,8 +199,9 @@ const Loantypes = () => {
                 <h2>01</h2>
                 <h3>Development Loan</h3>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Labore, totam velit? Iure nemo labore inventore?
+                  This is intended to empower members undertake development
+                  projects with long-term benefits e.g Business Ventures,
+                  Residential buildings and other investments.
                 </p>
                 <a href="#">Read More</a>
               </Content>
@@ -212,8 +214,8 @@ const Loantypes = () => {
                 <h2>02</h2>
                 <h3>Emergency Loan</h3>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Labore, totam velit? Iure nemo labore inventore?
+                  This is for all members to enhance them attend to any
+                  emerging/unexpected emergencies.
                 </p>
                 <a href="#">Read More</a>
               </Content>
@@ -226,8 +228,8 @@ const Loantypes = () => {
                 <h2>03</h2>
                 <h3>Normal Loan</h3>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Labore, totam velit? Iure nemo labore inventore?
+                  This is a short term form of financing that will help members
+                  in meeting immediate financial essentials.
                 </p>
                 <a href="#">Read More</a>
               </Content>
@@ -240,8 +242,8 @@ const Loantypes = () => {
                 <h2>04</h2>
                 <h3>Education Loan</h3>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Labore, totam velit? Iure nemo labore inventore?
+                  The sacco offers its members with an opportunity to pay for
+                  their studies as well as their children's school fees.
                 </p>
                 <a href="#">Read More</a>
               </Content>
@@ -254,8 +256,8 @@ const Loantypes = () => {
                 <h2>05</h2>
                 <h3>Asset Finance</h3>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Labore, totam velit? Iure nemo labore inventore?
+                  This is a short term form of financing that will help you in
+                  meeting immediate financial essentials.
                 </p>
                 <a href="#">Read More</a>
               </Content>

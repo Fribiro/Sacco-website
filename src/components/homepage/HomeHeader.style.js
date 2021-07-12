@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Carousel from "react-bootstrap/Carousel";
+import {Link} from "react-scroll"
 
 const media = {
   mobile: "@media (min-width: 320px) and (max-width: 480px)",
@@ -61,6 +62,18 @@ const Headerhome = styled.div`
   & .headerText p {
     color: #fff;
   }
+
+  & button {
+    border: 0;
+    outline: none;
+    width: 7rem;
+    height: 3rem;
+    background-color: rgb(118, 191, 48);
+    color: #fff;
+    font-family: "Crimson Text", serif;
+    font-size: 1.3rem;
+  }
+
   ${media.mobile} {
     height: 40vh;
 
@@ -130,6 +143,11 @@ const Homeheader = () => {
                 that has been established under strict adherance to the Kenyan
                 Laws.Save with us, get loans and grow with us.
               </p>
+              <button>
+                <Link to="" spy={true} smooth={true}>
+                  Read More
+                </Link>
+              </button>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -142,10 +160,15 @@ const Homeheader = () => {
             <Carousel.Caption>
               <h1>Instant Loans</h1>
               <p>
-                Uniq Sacco is one of the accredited saccos found within Nairobi
+                Unik Sacco is one of the accredited saccos found within Nairobi
                 that has been established under strict adherance to the Kenyan
                 Laws.Save with us, get loans and grow with us.
               </p>
+              <button>
+                <Link to="about" spy={true} smooth={true}>
+                  Read More
+                </Link>
+              </button>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -162,6 +185,11 @@ const Homeheader = () => {
                 that has been established under strict adherance to the Kenyan
                 Laws.Save with us, get loans and grow with us.
               </p>
+              <button>
+                <Link to="about" spy={true} smooth={true}>
+                  Read More
+                </Link>
+              </button>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>

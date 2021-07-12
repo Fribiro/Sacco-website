@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const media = {
   mobile: "@media (min-width: 320px) and (max-width: 480px)",
@@ -11,7 +12,7 @@ const media = {
 
 const Main = styled.div`
   width: 100%;
-  height: 30rem;
+  height: 35rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,6 +39,11 @@ const Main = styled.div`
     font-family: "Abril Fatface", cursive;
   }
 
+  & .content p {
+    font-family: "Crimson Text", serif;
+    font-size: 1rem;
+  }
+
   & .aboutRightSection {
     width: 50%;
     height: 64%;
@@ -60,6 +66,11 @@ const Main = styled.div`
     border: 0;
     width: 6rem;
     height: 2.5rem;
+  }
+
+  & .aboutButton a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
   }
 
   ${media.mobile} {
@@ -114,20 +125,24 @@ const HomeAbout = () => {
     return (
       <div>
         <Main>
-          <div className="aboutWrapper">
-            <div className="aboutLeftSection">
-              
-            </div>
+          <div name="about" className="aboutWrapper">
+            <div className="aboutLeftSection"></div>
             <div className="aboutRightSection">
               <div className="content">
                 <h2>About Us</h2>
                 <p>
-                  Uniq Sacco is one of the accredited saccos found within
-                  Nairobi that has been established under strict adherance to
-                  the Kenyan Laws.Save with us, get loans and grow with us. We offer
-                  loans to cater for various needs.
+                  UNIK SACCO is a reputable Savings and Credit Co-operative
+                  Society registered in 2020 under the Co-operative Societies
+                  Act (Cap.490) of the Laws of Kenya by Unique tracking company,
+                  out of the need to provide savings and affordable credit
+                  facilities to its employees. Our success is attributed to our
+                  vision “To be the most accredited Sacco of Excellence among
+                  the best managed in the country”. Our record of accomplishment
+                  is felt everywhere, from our strongest asset, our employees,
+                  competitive products portfolio, strong market positioning and
+                  digital presence.
                 </p>
-                <button className="aboutButton">More</button>
+                <button className="aboutButton"><Link to="/about">Read More</Link></button>
               </div>
             </div>
           </div>

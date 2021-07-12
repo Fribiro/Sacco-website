@@ -22,6 +22,11 @@ import {
 import Contact from './components/contacts/Contact';
 import Loancalculator from './components/loancalculator/Loancalculator';
 import About from './components/about/About';
+import AssetFinanceMain from './components/loantypes/AssetFinance';
+import Emergency from './components/loantypes/Emergency';
+import Education from './components/loantypes/Education';
+import Development from './components/loantypes/Development';
+import Normal from './components/loantypes/Normal';
 
 library.add(
   fab,
@@ -48,6 +53,12 @@ function App() {
           <Route exact path="/about" component={About} />
           <Route exact path="/contacts" component={Contact} />
           <Route exact path="/loan-calculator" component={Loancalculator} />
+          <Route exact path="/asset-finance" component={AssetFinanceMain} />
+          <Route exact path="/emergency-loan" component={Emergency} />
+          <Route exact path="/education-loan" component={Education} />
+          <Route exact path="/development-loan" component={Development} />
+          <Route exact path="/normal-loan" component={Normal} />
+
         </Switch>
       </Router>
     </div>

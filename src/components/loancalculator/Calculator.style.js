@@ -32,7 +32,7 @@ const Calc = styled.div`
   height: 30rem;
   display: flex;
   justify-content: center;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
 
   & .calc-container {
     background-color: rgb(118, 191, 48);
@@ -82,13 +82,13 @@ const Calc = styled.div`
 
   & .output-group > h4 {
     font-weight: bolder;
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     color: rgb(118, 191, 48);
   }
 
   & .output-group > h5 {
     font-weight: bold;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: #fff;
   }
 
@@ -113,11 +113,16 @@ const Calc = styled.div`
 
   & .input-group > label {
     font-family: "Crimson Text", serif;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+  }
+
+  & input#principal,
+  input#interest,
+  input#duration {
+    border-radius: 1rem;
   }
 
   & .input-group > input {
-    //border-radius: 1rem;
     border: 0;
   }
 
@@ -134,9 +139,39 @@ const Calc = styled.div`
     padding: 0.3rem 0.8rem;
     color: #fff;
     background-color: #000;
-    border-radius: .2rem;
+    border-radius: 2rem;
+    width: 10rem;
   }
 `;
+
+const Disclaimer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  & .disclaimerLeft {
+    width: 70%;
+  }
+
+`
+
+const DisclaimerTitle = styled.h2`
+  width: 50%;
+
+  & h2 {
+    color: red;
+    margin-top: 0;
+    font-family: "Abril Fatface", cursive;
+  }
+`
+
+const DisclaimerText = styled.ul`
+  width: 70%;
+  display: inline-block;
+  list-style: lower-roman;
+`
 
 const Calculator = () => {
     const [principal, setPrincipal] = useState("")
@@ -195,7 +230,7 @@ const Calculator = () => {
                   <input
                     type="number"
                     name="principal"
-                    id="princpal"
+                    id="principal"
                     onChange={(e) => setPrincipal(e.target.value)}
                   />
                 </div>
@@ -229,6 +264,32 @@ const Calculator = () => {
               </div>
             </div>
           </Calc>
+          <Disclaimer>
+            <div className="disclaimerLeft">
+              <DisclaimerTitle>
+                <h2>Disclaimer!</h2>
+              </DisclaimerTitle>
+              <DisclaimerText>
+                <li>
+                  The estimate provided is not a loan contract and is a
+                  non-binding approximation of the cost of the sacco loan in an
+                  effort to help prospective borrowers estimate loan costs. If
+                  you are interested in getting a loan with us, you should
+                  contact us directly.
+                </li>
+                <li>The interest is calculated on a flat-rate basis.</li>
+                <li>
+                  The external charges featured here are estimates on third
+                  party costs that are associated with the loan facility that
+                  you wish to apply for.
+                </li>
+                <li>
+                  Please contact us for further details on the total cost of
+                  credit for the loan you wish to apply for.
+                </li>
+              </DisclaimerText>
+            </div>
+          </Disclaimer>
         </Mainwrapper>
       </div>
     );

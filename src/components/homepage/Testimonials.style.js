@@ -109,7 +109,7 @@ const Mainwrapper = styled.div`
 
   & blockquote::before {
     content: "“";
-    font-size: 50px;
+    font-size: 3rem;
     position: relative;
     color: rgba(118, 191, 48, 0.9);
     line-height: 20px;
@@ -119,7 +119,7 @@ const Mainwrapper = styled.div`
 
   & blockquote::after {
     content: "”";
-    font-size: 50px;
+    font-size: 3rem;
     position: relative;
     color: rgba(118, 191, 48, 0.9);
     line-height: 10px;

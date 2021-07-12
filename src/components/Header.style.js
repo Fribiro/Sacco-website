@@ -51,9 +51,14 @@ const Navwrapper = styled.div`
     display: none;
   }
 
-  .dropdown-menu {
+  & .dropdown-menu {
     background-color: #f8f9fa !important;
     border: 0;
+  }
+
+  & .dropdown-item:focus {
+    color: #fff;
+    background-color: #76bf30;
   }
 
   & .navbar-dark .navbar-brand {
@@ -118,59 +123,6 @@ const Header = () => {
   return (
     <div>
       <Navwrapper>
-        {/* <Navbar collapseOnSelect expand="lg" bg="white" variant="dark">
-          <Navbar.Brand to="#home">
-            <img
-              src="uniqlogo.png"
-              style={{ width: "6rem", height: "3.5rem" }}
-            ></img>
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav navbar-light" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mr-auto">
-              <Nav.Link to="/">Home</Nav.Link>
-              <Nav.Link to="about">About</Nav.Link>
-              <NavDropdown
-                title="Savings Products"
-                id="collasible-nav-dropdown"
-              >
-                <NavDropdown.Item to="savings-products">
-                  Savings Products
-                </NavDropdown.Item>
-                <NavDropdown.Item to="#action/3.2">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Item to="#action/3.3">
-                  Something
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item to="#action/3.4">
-                  Separated link
-                </NavDropdown.Item>
-              </NavDropdown>
-              <NavDropdown title="Loan Products" id="collasible-nav-dropdown">
-                <NavDropdown.Item to="normal-loan">
-                  Normal Loan
-                </NavDropdown.Item>
-                <NavDropdown.Item to="education-loan">
-                  Education Loan
-                </NavDropdown.Item>
-                <NavDropdown.Item to="asset-finance">
-                  Asset Finance
-                </NavDropdown.Item>
-                <NavDropdown.Item to="development-loan">
-                  Development Loan
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item to="emergency-loan">
-                  Emergency Loan
-                </NavDropdown.Item>
-              </NavDropdown>
-              <Nav.Link to="loan-calculator">Loan Calculator</Nav.Link>
-              <Nav.Link to="contacts">Contacts</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar> */}
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <Link class="navbar-brand" to="#">
             <img src="uniqlogo.png"></img>
@@ -197,11 +149,11 @@ const Header = () => {
                 </Link>
               </li>
               <li class="nav-item">
-                <Link class="nav-link" to="#">
+                <Link class="nav-link" to="about">
                   About
                 </Link>
               </li>
-              <li class="nav-item dropdown">
+              {/* <li class="nav-item dropdown">
                 <Link
                   class="nav-link dropdown-toggle"
                   to="#"
@@ -226,7 +178,7 @@ const Header = () => {
                     Something else here
                   </Link>
                 </div>
-              </li>
+              </li> */}
               <li class="nav-item dropdown">
                 <Link
                   class="nav-link dropdown-toggle"
@@ -242,19 +194,19 @@ const Header = () => {
                   class="dropdown-menu"
                   aria-labelledby="navbarDropdownMenuLink"
                 >
-                  <Link class="dropdown-item" to="#">
+                  <Link class="dropdown-item" to="normal-loan">
                     Normal Loan
                   </Link>
-                  <Link class="dropdown-item" to="#">
+                  <Link class="dropdown-item" to="education-loan">
                     Education Loan
                   </Link>
-                  <Link class="dropdown-item" to="#">
+                  <Link class="dropdown-item" to="/asset-finance">
                     Asset Finance
                   </Link>
-                  <Link class="dropdown-item" to="#">
+                  <Link class="dropdown-item" to="development-loan">
                     Development Loan
                   </Link>
-                  <Link class="dropdown-item" to="#">
+                  <Link class="dropdown-item" to="emergency-loan">
                     Emergency Loan
                   </Link>
                 </div>
