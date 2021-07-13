@@ -2,6 +2,7 @@ import React from 'react'
 import styled from "styled-components";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import {Link} from 'react-router-dom'
 
 const responsive = {
   desktop: {
@@ -203,7 +204,7 @@ const Loantypes = () => {
                   projects with long-term benefits e.g Business Ventures,
                   Residential buildings and other investments.
                 </p>
-                <a href="#">Read More</a>
+                <Link to="/development-loan">Read More</Link>
               </Content>
             </Box>
           </Card>
@@ -217,7 +218,7 @@ const Loantypes = () => {
                   This is for all members to enhance them attend to any
                   emerging/unexpected emergencies.
                 </p>
-                <a href="#">Read More</a>
+                <Link to="/emergency-loan">Read More</Link>
               </Content>
             </Box>
           </Card>
@@ -231,7 +232,7 @@ const Loantypes = () => {
                   This is a short term form of financing that will help members
                   in meeting immediate financial essentials.
                 </p>
-                <a href="#">Read More</a>
+                <Link to="/normal-loan">Read More</Link>
               </Content>
             </Box>
           </Card>
@@ -245,7 +246,7 @@ const Loantypes = () => {
                   The sacco offers its members with an opportunity to pay for
                   their studies as well as their children's school fees.
                 </p>
-                <a href="#">Read More</a>
+                <Link to="/education-loan">Read More</Link>
               </Content>
             </Box>
           </Card>
@@ -259,7 +260,7 @@ const Loantypes = () => {
                   This is a short term form of financing that will help you in
                   meeting immediate financial essentials.
                 </p>
-                <a href="#">Read More</a>
+                <Link to="/asset-finance">Read More</Link>
               </Content>
             </Box>
           </Card>

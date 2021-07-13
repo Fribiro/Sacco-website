@@ -46,6 +46,7 @@ const EducationBody = styled.div`
     font-family: "Crimson Text", serif;
     color: rgba(118, 191, 48, 0.9);
     font-size: 1.5rem;
+    font-weight: bold;
   }
 `;
 
@@ -54,15 +55,15 @@ const Title = styled.div`
   align-items: center;
   justify-content: flex-start;
 
-  & h2 {
+  & h5 {
     align-items: center;
     font-family: "Abril Fatface", cursive;
     justify-content: flex-start;
     color: rgba(118, 191, 48, 0.9);
-    margin: 2rem;
+    margin: 2rem 0;
   }
 
-  & h2::after {
+  & h5::after {
     content: "";
     background: rgba(118, 191, 48, 0.9);
     display: block;
@@ -75,20 +76,20 @@ const Title = styled.div`
 const EducationLoan = () => {
     return (
       <div>
-        <LoanHeader></LoanHeader>
+        <LoanHeader loantitle={"Education Loan"}></LoanHeader>
         <EducationBody>
           <div className="assetWrapper">
             <div className="leftAsset">
               <Title>
-                <h2>Education Loan</h2>
+                <h5>Product Description</h5>
               </Title>
               <div className="assetText">
                 <p>
                   Funding education should not be a headache. With supporting
                   documents like fees structures, you can easily apply for a
-                  school fees loan for yourself/or your child. Get the best
-                  education with our help. Save with us to meet the cost of
-                  education!
+                  school fees loan for yourself/or your child; which will be
+                  disbursed within one week. Get the best education with our
+                  help. Save with us to meet the cost of education!
                 </p>
                 <h5>Requirements</h5>
                 <ul>
@@ -106,11 +107,18 @@ const EducationLoan = () => {
                   <li>
                     Interest charged at 1% per month on reducing balance method.
                   </li>
+                  <li>
+                    Maximum limit is a member's deposit x3 (subject to 1/3
+                    salary rule).
+                  </li>
+                  <li>
+                    Minimum of 2 guarantors and acceptable collaterals required.
+                  </li>
                 </ul>
               </div>
             </div>
             <div className="rightAsset">
-              <SidebarLoanLinks/>
+              <SidebarLoanLinks />
             </div>
           </div>
         </EducationBody>

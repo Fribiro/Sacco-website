@@ -1,16 +1,20 @@
 import React from 'react'
 import styled from "styled-components";
+import Footer from '../navigation/Footer.style';
+import Header from '../navigation/Header.style';
 
-const Mainwrapper = styled.div`
+const Whowrapper = styled.div`
 
 `
 
 const AboutContent = () => {
     return (
         <div>
-            <Mainwrapper>
+            <Header/>
+            <Whowrapper>
                 
-            </Mainwrapper>
+            </Whowrapper>
+            <Footer/>
         </div>
     )
 }

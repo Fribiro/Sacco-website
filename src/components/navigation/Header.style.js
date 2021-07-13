@@ -47,6 +47,11 @@ const Navwrapper = styled.div`
     font-size: 1rem;
   }
 
+  & .dropdown-item {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 1rem;
+  }
+
   & .dropdown-toggle:after {
     display: none;
   }
@@ -124,7 +129,7 @@ const Header = () => {
     <div>
       <Navwrapper>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <Link class="navbar-brand" to="#">
+          <Link class="navbar-brand" to="/">
             <img src="uniqlogo.png"></img>
           </Link>
           <button
@@ -138,47 +143,42 @@ const Header = () => {
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div
-            class="collapse navbar-collapse"
-            id="navbarNavDropdown"
-          >
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <li class="nav-item active">
                 <Link class="nav-link" to="/">
                   Home <span class="sr-only">(current)</span>
                 </Link>
               </li>
-              <li class="nav-item">
-                <Link class="nav-link" to="about">
-                  About
-                </Link>
-              </li>
-              {/* <li class="nav-item dropdown">
+              <li class="nav-item dropdown">
                 <Link
                   class="nav-link dropdown-toggle"
-                  to="#"
+                  to="about"
                   id="navbarDropdownMenuLink"
                   data-toggle="dropdown"
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
-                  Savings Products
+                  About
                 </Link>
                 <div
                   class="dropdown-menu"
                   aria-labelledby="navbarDropdownMenuLink"
                 >
-                  <Link class="dropdown-item" to="#">
-                    Action
+                  <Link class="dropdown-item" to="/who-we-are">
+                    Who We Are
                   </Link>
-                  <Link class="dropdown-item" to="#">
-                    Another action
+                  <Link class="dropdown-item" to="/our-story">
+                    Our Story
                   </Link>
-                  <Link class="dropdown-item" to="#">
-                    Something else here
+                  <Link class="dropdown-item" to="/board-of-directors">
+                    Board of Directors
+                  </Link>
+                  <Link class="dropdown-item" to="/sacco-membership">
+                    Sacco Membership
                   </Link>
                 </div>
-              </li> */}
+              </li>
               <li class="nav-item dropdown">
                 <Link
                   class="nav-link dropdown-toggle"

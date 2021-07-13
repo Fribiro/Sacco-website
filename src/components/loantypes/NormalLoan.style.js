@@ -46,6 +46,7 @@ const NormalBody = styled.div`
     font-family: "Crimson Text", serif;
     color: rgba(118, 191, 48, 0.9);
     font-size: 1.5rem;
+    font-weight: bold;
   }
 `;
 
@@ -54,15 +55,15 @@ const Title = styled.div`
   align-items: center;
   justify-content: flex-start;
 
-  & h2 {
+  & h5 {
     align-items: center;
     font-family: "Abril Fatface", cursive;
     justify-content: flex-start;
     color: rgba(118, 191, 48, 0.9);
-    margin: 2rem;
+    margin: 2rem 0;
   }
 
-  & h2::after {
+  & h5::after {
     content: "";
     background: rgba(118, 191, 48, 0.9);
     display: block;
@@ -75,18 +76,20 @@ const Title = styled.div`
 const NormalLoan = () => {
     return (
       <div>
-        <LoanHeader></LoanHeader>
+        <LoanHeader loantitle={"Normal Loan"}></LoanHeader>
         <NormalBody>
           <div className="assetWrapper">
             <div className="leftAsset">
               <Title>
-                <h2>Normal Loan</h2>
+                <h5>Product Description</h5>
               </Title>
               <div className="assetText">
                 <p>
-                  The main purpose of this type of loan is to enable the member
-                  to develop him/herself and improve his/her standard of living.
-                  This is the main type of loan the society offers.
+                  This is a short term form of financing that will enable you to
+                  meet immediate financial essentials. The main purpose of this
+                  type of loan is to enable the member to develop him/herself
+                  and improve his/her standard of living. This is the main type
+                  of loan the society offers.
                 </p>
                 <h5>Requirements</h5>
                 <ul>
@@ -103,17 +106,13 @@ const NormalLoan = () => {
                   <li>
                     Interest charged at 1% per month on reducing balance method.
                   </li>
-                  <li>Maximum repayment period is 24 months.</li>
-                  <li>Emergency loans have a maximum of Kshs. 100,000</li>
-                  <li>
-                    Member to attach supporting documents to application form
-                    e.g. medical bill, death certificate
-                  </li>
+                  <li>One must have a minimum of two guarantors.</li>
+                  <li>One normal loan to be granted at a time.</li>
                 </ul>
               </div>
             </div>
             <div className="rightAsset">
-              <SidebarLoanLinks/>
+              <SidebarLoanLinks />
             </div>
           </div>
         </NormalBody>

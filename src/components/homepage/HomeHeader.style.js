@@ -130,7 +130,7 @@ const Homeheader = () => {
                 <p>Unik Sacco is one of the accredited saccos found within Nairobi that has been established under strict adherance to the Kenyan Laws.Save with us, get loans and grow with us.</p>
             </div> */}
         <Carousel fade>
-          <Carousel.Item>
+          <Carousel.Item interval={1500}>
             <img
               className="d-block w-100"
               src="/img/graphs.jpg"
@@ -150,7 +150,7 @@ const Homeheader = () => {
               </button>
             </Carousel.Caption>
           </Carousel.Item>
-          <Carousel.Item>
+          <Carousel.Item interval={1500}>
             <img
               className="d-block w-100"
               src="/img/desk7.jpg"
@@ -171,7 +171,7 @@ const Homeheader = () => {
               </button>
             </Carousel.Caption>
           </Carousel.Item>
-          <Carousel.Item>
+          <Carousel.Item interval={1500}>
             <img
               className="d-block w-100"
               src="/img/desk9.jpg"

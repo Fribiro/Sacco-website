@@ -46,6 +46,7 @@ const EmergencyBody = styled.div`
     font-family: "Crimson Text", serif;
     color: rgba(118, 191, 48, 0.9);
     font-size: 1.5rem;
+    font-weight: bold;
   }
 `;
 
@@ -54,20 +55,20 @@ const Title = styled.div`
   align-items: center;
   justify-content: flex-start;
 
-  & h2 {
+  & h5 {
     align-items: center;
     font-family: "Abril Fatface", cursive;
     justify-content: flex-start;
     color: rgba(118, 191, 48, 0.9);
-    margin: 2rem;
+    margin: 2rem 0;
   }
 
-  & h2::after {
+  & h5::after {
     content: "";
     background: rgba(118, 191, 48, 0.9);
     display: block;
     height: 0.2rem;
-    width: 12rem;
+    width: 10rem;
     margin: 7px auto 5px;
   }
 `;
@@ -75,20 +76,21 @@ const Title = styled.div`
 const EmergencyLoan = () => {
     return (
       <div>
-        <LoanHeader></LoanHeader>
+        <LoanHeader loantitle={"Emergency Loan"}></LoanHeader>
         <EmergencyBody>
           <div className="assetWrapper">
             <div className="leftAsset">
               <Title>
-                <h2>Emergency Loan</h2>
+                <h5>Product Description</h5>
               </Title>
               <div className="assetText">
                 <p>
-                  An emergency is defined as an unforeseen event or expense.
-                  Most common examples are court fines, medical illness or death
-                  within the family, which is beyond a member’s control. With a
-                  supporting document like a medical bill, you can qualify an
-                  emergency loan to meet these expenses.
+                  An emergency is defined as an unforeseen event or expense. The
+                  waiting period not being more than 24 hours.Most common
+                  examples are court fines, medical illness or death within the
+                  family, which is beyond a member’s control. With a supporting
+                  document like a medical bill, you can qualify an emergency
+                  loan to meet these expenses.
                 </p>
                 <h5>Requirements</h5>
                 <ul>

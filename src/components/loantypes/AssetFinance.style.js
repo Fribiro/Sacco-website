@@ -46,6 +46,7 @@ const AssetFinanceBody = styled.div`
     font-family: "Crimson Text", serif;
     color: rgba(118, 191, 48, 0.9);
     font-size: 1.5rem;
+    font-weight: bold;
   }
 `;
 
@@ -54,15 +55,15 @@ const Title = styled.div`
   align-items: center;
   justify-content: flex-start;
 
-  & h2 {
+  & h5 {
     align-items: center;
     font-family: "Abril Fatface", cursive;
     justify-content: flex-start;
     color: rgba(118, 191, 48, 0.9);
-    margin: 2rem;
+    margin: 2rem 0;
   }
 
-  & h2::after {
+  & h5::after {
     content: "";
     background: rgba(118, 191, 48, 0.9);
     display: block;
@@ -75,19 +76,19 @@ const Title = styled.div`
 const AssetFinance = () => {
     return (
       <div>
-        <LoanHeader></LoanHeader>
+        <LoanHeader loantitle={"Asset Finance"}></LoanHeader>
         <AssetFinanceBody>
           <div className="assetWrapper">
             <div className="leftAsset">
               <Title>
-                <h2>Asset Finance</h2>
+                <h5>Product Description</h5>
               </Title>
               <div className="assetText">
                 <p>
                   This is a short term form of financing that will help members
                   in meeting immediate financial essentials.
                 </p>
-                <h5>Product Features</h5>
+                <h5>Requirements</h5>
                 <ul>
                   <li>
                     This product will enable members to buy motor vehicles and
@@ -151,7 +152,7 @@ const AssetFinance = () => {
               </div>
             </div>
             <div className="rightAsset">
-              <SidebarLoanLinks/>
+              <SidebarLoanLinks />
             </div>
           </div>
         </AssetFinanceBody>

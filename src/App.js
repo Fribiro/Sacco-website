@@ -27,6 +27,10 @@ import Emergency from './components/loantypes/Emergency';
 import Education from './components/loantypes/Education';
 import Development from './components/loantypes/Development';
 import Normal from './components/loantypes/Normal';
+import AboutContent from './components/about/AboutContent.style';
+import Board from './components/about/Board.style';
+import Ourstory from './components/about/Ourstory.style';
+import Membership from './components/about/Membership.style';
 
 library.add(
   fab,
@@ -50,7 +54,11 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/" component={Homepage} />
-          <Route exact path="/about" component={About} />
+          {/* <Route exact path="/about" component={About} /> */}
+          <Route exact path="/who-we-are" component={AboutContent} />
+          <Route exact path="/our-story" component={Ourstory} />
+          <Route exact path="/board-of-directors" component={Board} />
+          <Route exact path="/sacco-membership" component={Membership} />
           <Route exact path="/contacts" component={Contact} />
           <Route exact path="/loan-calculator" component={Loancalculator} />
           <Route exact path="/asset-finance" component={AssetFinanceMain} />
@@ -58,7 +66,6 @@ function App() {
           <Route exact path="/education-loan" component={Education} />
           <Route exact path="/development-loan" component={Development} />
           <Route exact path="/normal-loan" component={Normal} />
-
         </Switch>
       </Router>
     </div>

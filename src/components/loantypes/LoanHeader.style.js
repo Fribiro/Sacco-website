@@ -3,24 +3,39 @@ import styled from 'styled-components'
 
 const LoanHeaderWrapper = styled.div`
   width: 100%;
-  height: 40vh;
-  position: relative;
-  background: URL("/img/desk7.jpg");
-  filter: brightness(60%);
-  -webkit-filter: brightness(60%);
-  background: no repeat center center scroll;
-  -webkit-background-size: cover;
-  background-size: cover;
+  height: 35vh;
+  margin-top: 11vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  & .loan-header-bgimg {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: url("/img/desk7.jpg");
+    filter: brightness(60%);
+    background: no repeat center center scroll;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
 
   & .loanTitleType {
-      position: absolute;
+    position: absolute;
+    left: 6rem;
+    z-index: 1;
+    color: rgba(118, 191, 48, 0.9);
+    font-family: "Abril Fatface", cursive;
+    padding-left: 1rem;
+    border-left: 0.4rem solid rgba(118, 191, 48, 0.9);
   }
 `;
 
-const LoanHeader = () => {
+const LoanHeader = (props) => {
     return (
         <LoanHeaderWrapper>
-            <h2 className="loanTitleType">Asset Finance</h2>
+            <div className="loan-header-bgimg"></div>
+            <h2 className="loanTitleType">{props.loantitle}</h2>
         </LoanHeaderWrapper>
     )
 }
