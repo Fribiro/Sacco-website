@@ -6,6 +6,7 @@ import SidebarLoanLinks from './SidebarLoanLinks.style';
 const EducationBody = styled.div`
   display: flex;
   justify-content: center;
+  margin-bottom: 3rem;
 
   & .assetWrapper {
     width: 80%;
@@ -37,7 +38,7 @@ const EducationBody = styled.div`
   }
 
   & .assetText > ul > li {
-    list-style-type: lower-roman;
+    list-style-type: circle solid black;
     font-family: "Crimson Text", serif;
     font-size: 1.2rem;
   }

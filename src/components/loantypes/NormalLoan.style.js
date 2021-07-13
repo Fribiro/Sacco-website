@@ -7,6 +7,7 @@ const NormalBody = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 3rem;
 
   & .assetWrapper {
     width: 80%;
@@ -37,7 +38,7 @@ const NormalBody = styled.div`
   }
 
   & .assetText > ul > li {
-    list-style-type: lower-roman;
+    list-style-type: circle solid black;
     font-family: "Crimson Text", serif;
     font-size: 1.2rem;
   }
