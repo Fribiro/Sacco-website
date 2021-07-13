@@ -253,19 +253,19 @@ const Footer = () => {
                 <h3>Page Links</h3>
                 <ul>
                   <li>
-                    <Link to="/developmentloan">Development Loan</Link>
+                    <Link to="/development-loan">Development Loan</Link>
                   </li>
                   <li>
-                    <Link to="/emergencyloan">Emergency Loan</Link>
+                    <Link to="/emergency-loan">Emergency Loan</Link>
                   </li>
                   <li>
-                    <Link to="/normalloan">Normal Loan</Link>
+                    <Link to="/normal-loan">Normal Loan</Link>
                   </li>
                   <li>
-                    <Link to="/educationloan">Education Loan</Link>
+                    <Link to="/education-loan">Education Loan</Link>
                   </li>
                   <li>
-                    <Link to="/assetfinance">Asset Finance</Link>
+                    <Link to="/asset-finance">Asset Finance</Link>
                   </li>
                 </ul>
               </div>

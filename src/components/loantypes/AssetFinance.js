@@ -1,6 +1,6 @@
 import React from 'react'
-import Header from '../Header.style'
-import Footer from '../Footer.style'
+import Header from "../navigation/Header.style";
+import Footer from "../navigation/Footer.style";
 import AssetFinance from './AssetFinance.style'
 
 const AssetFinanceMain = () => {

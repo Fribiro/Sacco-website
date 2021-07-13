@@ -1,6 +1,6 @@
 import React from 'react'
-import Footer from '../Footer.style'
-import Header from '../Header.style'
+import Header from "../navigation/Header.style";
+import Footer from "../navigation/Footer.style";
 import AboutContent from './AboutContent.style'
 
 const About = () => {
