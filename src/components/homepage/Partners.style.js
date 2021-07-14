@@ -3,6 +3,14 @@ import styled from "styled-components";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
+const media = {
+  mobile: "@media (min-width: 320px) and (max-width: 480px)",
+  tablet: "@media (min-width: 481px) and (max-width: 768px)",
+  laptop: "@media (min-width: 769px) and (max-width: 1024px)",
+  desktops: "@media (min-width: 1025px) and (max-width: 1200px)",
+  extralarge: "@media (min-width: 1201px)",
+};
+
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -52,6 +60,21 @@ const Mainwrapper = styled.div`
     width: 8rem !important;
     margin: 0 2rem;
   }
+
+  ${media.mobile} {
+    & .carousselContainer {
+      height: 7rem;
+    }
+
+    & .partnerLogo {
+      width: 7.4rem;
+      height: 3rem;
+      margin: 0 .3rem;
+    }
+  }
+
+  ${media.tablet} {
+  }
 `;
 
 const Title = styled.div`
@@ -74,6 +97,12 @@ const Title = styled.div`
     height: 0.2rem;
     width: 5rem;
     margin: 7px auto 5px;
+  }
+
+  ${media.mobile} {
+    & h2 {
+      margin: 0rem;
+    }
   }
 `;
 

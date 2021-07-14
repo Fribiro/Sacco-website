@@ -28,8 +28,8 @@ const EmergencyBody = styled.div`
     justify-content: start;
     font-family: "Crimson Text", serif;
     font-size: 1.2rem;
-    height: 18rem;
-    margin: 5rem 2rem 5rem 6rem;
+    margin: 2rem 0rem 5rem 6rem;
+    justify-content: flex-end;
   }
 
   & .assetText p {

@@ -25,7 +25,7 @@ const Mainwrapper = styled.div`
     height: 100%;
     object-fit: cover;
     filter: brightness(50%);
-  -webkit-filter: brightness(50%);
+    -webkit-filter: brightness(50%);
   }
 
   & .container {
@@ -69,6 +69,21 @@ const Mainwrapper = styled.div`
   & .text {
     font-size: 1.2rem;
     font-weight: bold;
+  }
+
+  ${media.mobile} {
+    flex-direction: column;
+
+    & .counterImg {
+      display: none;
+    }
+
+    & .container {
+      width: 100%;
+    }
+  }
+
+  ${media.tablet} {
   }
 `;
 

@@ -168,9 +168,6 @@ const Header = () => {
                   <Link class="dropdown-item" to="/who-we-are">
                     Who We Are
                   </Link>
-                  <Link class="dropdown-item" to="/our-story">
-                    Our Story
-                  </Link>
                   <Link class="dropdown-item" to="/board-of-directors">
                     Board of Directors
                   </Link>
@@ -214,6 +211,11 @@ const Header = () => {
               <li class="nav-item">
                 <Link class="nav-link" to="loan-calculator">
                   Loan Calculator
+                </Link>
+              </li>
+              <li class="nav-item">
+                <Link class="nav-link" to="contacts">
+                  Downloads
                 </Link>
               </li>
               <li class="nav-item">

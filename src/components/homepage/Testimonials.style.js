@@ -4,6 +4,14 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+const media = {
+  mobile: "@media (min-width: 320px) and (max-width: 480px)",
+  tablet: "@media (min-width: 481px) and (max-width: 768px)",
+  laptop: "@media (min-width: 769px) and (max-width: 1024px)",
+  desktops: "@media (min-width: 1025px) and (max-width: 1200px)",
+  extralarge: "@media (min-width: 1201px)",
+};
+
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -132,6 +140,13 @@ const Mainwrapper = styled.div`
     cursor: pointer;
     transition: 0.5s;
   }
+
+  ${media.mobile} {
+    & .testimonials {
+      margin: 1rem 2rem;
+      height: fit-content;
+    }
+  }
 `;
 
 const Title = styled.div`
@@ -181,7 +196,7 @@ const Testimonials = () => {
                     </blockquote>
                     <div className="testimonialmember">
                       <h3>Festus Festus</h3>
-                      <span> Group CEO &amp; a Shareholder of Topnotch</span>
+                      <span> Group CEO &amp; Founder of Topnotch</span>
                     </div>
                   </div>
                 </div>

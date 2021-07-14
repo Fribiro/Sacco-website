@@ -75,7 +75,15 @@ const Headerhome = styled.div`
   }
 
   ${media.mobile} {
-    height: 40vh;
+    height: 30vh;
+
+    & .carousel.slide.carousel-fade {
+      height: 100%;
+    }
+
+    & .carousel-inner {
+      height: 100%;
+    }
 
     & .headerText {
       width: 20rem;

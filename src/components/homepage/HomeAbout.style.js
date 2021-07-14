@@ -75,6 +75,7 @@ const Main = styled.div`
 
   ${media.mobile} {
     margin: 2rem 0;
+    height: 42rem;
 
     & .aboutWrapper {
       flex-direction: column;

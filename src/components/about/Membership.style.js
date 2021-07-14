@@ -5,6 +5,7 @@ import Header from "../navigation/Header.style";
 import Aboutheader from './Aboutheader.style';
 import {
   AboutBody,
+  AboutMain,
   AboutText,
   Aboutwrapper,
   LeftAbout,
@@ -16,7 +17,7 @@ const Membershipwrapper = styled.div``;
 
 const Membership = () => {
     return (
-      <div>
+      <AboutMain>
         <Header />
         <Membershipwrapper>
           <Aboutheader abouttitle={"Sacco Membership"}></Aboutheader>
@@ -99,7 +100,7 @@ const Membership = () => {
           </AboutBody>
         </Membershipwrapper>
         <Footer />
-      </div>
+      </AboutMain>
     );
 }
 
