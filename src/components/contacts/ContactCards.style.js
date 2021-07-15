@@ -14,17 +14,24 @@ const media = {
 const Contactheader = styled.div`
   height: 70vh;
   width: 100%;
-  background: URL("/img/desk7.jpg");
-  filter: brightness(90%);
-  -webkit-filter: brightness(90%);
-  background: no repeat center center scroll;
-  -webkit-background-size: cover;
-  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
 
+  & .contactHeaderImg {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: URL("/img/desk7.jpg");
+    filter: brightness(60%);
+    -webkit-filter: brightness(60%);
+    background: no repeat center center scroll;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+
   & .headerText {
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,6 +49,24 @@ const Contactheader = styled.div`
     font-size: 1.4rem;
     font-family: "Crimson Text", serif;
     color: #fff;
+  }
+
+  ${media.mobile} {
+    & .headerText {
+      width: 100%;
+    }
+
+    & .headerText h2 {
+      font-family: "Abril Fatface", cursive;
+      color: rgba(118, 191, 48, 0.9);
+    }
+
+    & .headerText p {
+      text-align: center;
+      font-size: 1.4rem;
+      font-family: "Crimson Text", serif;
+      color: #fff;
+    }
   }
 `;
 
@@ -158,6 +183,7 @@ const Main = styled.div`
   }
 
   ${media.mobile} {
+    height: fit-content;
     flex-direction: column;
 
     & .title {
@@ -167,11 +193,18 @@ const Main = styled.div`
     & .sectionOneWrapper {
       flex-direction: column;
       width: 100%;
+      justify-content: center;
     }
 
     & .col {
       margin: 0.7rem 0.7rem;
       box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+    }
+
+    & .col1,
+    .col2,
+    .col3 {
+      padding: .2rem 1rem ;
     }
 
     & .col p {
@@ -254,6 +287,7 @@ const ContactCards = () => {
     return (
       <div>
         <Contactheader>
+          <div className="contactHeaderImg"></div>
           <div className="headerText">
             <h2>Contact Us</h2>
             <p>

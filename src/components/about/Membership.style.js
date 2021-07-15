@@ -20,7 +20,10 @@ const Membership = () => {
       <AboutMain>
         <Header />
         <Membershipwrapper>
-          <Aboutheader abouttitle={"Sacco Membership"}></Aboutheader>
+          <Aboutheader
+            abouttitle={"Sacco Membership"}
+            aboutHeadLink={"Sacco Membership"}
+          ></Aboutheader>
           <AboutBody>
             <Aboutwrapper>
               <LeftAbout>
@@ -79,7 +82,10 @@ const Membership = () => {
                     allowed to guarantee new loans.
                   </p>
                   <h5>Collaterals</h5>
-                  <p>Some of the collateral accepted are as stated but not limited to:</p>
+                  <p>
+                    Some of the collateral accepted are as stated but not
+                    limited to:
+                  </p>
                   <ul>
                     <li>
                       Deposits: Any form of deposits or non- withdrawable

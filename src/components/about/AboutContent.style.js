@@ -25,7 +25,10 @@ const AboutContent = () => {
       <AboutMain>
         <Header />
         <Whowrapper>
-          <Aboutheader abouttitle={"Who Are We"}></Aboutheader>
+          <Aboutheader
+            abouttitle={"Who Are We"}
+            aboutHeadLink={"Who Are We"}
+          ></Aboutheader>
           <AboutBody>
             <Aboutwrapper>
               <LeftAbout>

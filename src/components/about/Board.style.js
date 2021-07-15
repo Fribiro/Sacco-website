@@ -48,14 +48,14 @@ const Boardwrapper = styled.div`
     z-index: 1;
     position: relative;
     padding: 10px;
-    border: 2px solid #333;
+    border: 2px solid rgba(118, 191, 48, 0.9);
   }
 
   & .bodTitle {
     height: 45%;
     width: 100%;
-    background-color: rgba(118, 191, 48, 0.9);
-    color: #555;
+    background-color: rgb(216, 215, 215);
+    color: rgba(118, 191, 48, 0.9);//#555
     padding: 125px 25px 25px;
     margin-top: -100px;
     display: inline-block;
@@ -82,7 +82,10 @@ const Board = () => {
       <AboutMain>
         <Header />
         <Boardwrapper>
-          <Aboutheader abouttitle={"Board of Directors"}></Aboutheader>
+          <Aboutheader
+            abouttitle={"Board of Directors"}
+            aboutHeadLink={"Board of Directors"}
+          ></Aboutheader>
           <AboutBody>
             <Aboutwrapper>
               <div className="row">

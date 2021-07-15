@@ -2,88 +2,21 @@ import React from 'react'
 import styled from 'styled-components'
 import LoanHeader from './LoanHeader.style'
 import SidebarLoanLinks from './SidebarLoanLinks.style';
-
-const AssetFinanceBody = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 3rem;
-
-  & .assetWrapper {
-    width: 80%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  & .leftAsset {
-    left: 0;
-    width: 70%;
-    height: 100%;
-  }
-
-  & .rightAsset {
-    width: 30%;
-    display: flex;
-    justify-content: start;
-    font-family: "Crimson Text", serif;
-    font-size: 1.2rem;
-    margin: 2rem 0rem 5rem 6rem;
-    justify-content: flex-end;
-  }
-
-  & .assetText p {
-    font-family: "Crimson Text", serif;
-    font-size: 1.3rem;
-  }
-
-  & .assetText > ul > li {
-    list-style-type: circle solid black;
-    font-family: "Crimson Text", serif;
-    font-size: 1.2rem;
-  }
-
-  & .assetText h5 {
-    font-family: "Crimson Text", serif;
-    color: rgba(118, 191, 48, 0.9);
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-`;
-
-const Title = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-
-  & h5 {
-    align-items: center;
-    font-family: "Abril Fatface", cursive;
-    justify-content: flex-start;
-    color: rgba(118, 191, 48, 0.9);
-    margin: 2rem 0;
-  }
-
-  & h5::after {
-    content: "";
-    background: rgba(118, 191, 48, 0.9);
-    display: block;
-    height: 0.2rem;
-    width: 10rem;
-    margin: 7px auto 5px;
-  }
-`;
+import { LoanBody, LoanMain, LoanTitle } from "./Loantypes.style";
 
 const AssetFinance = () => {
     return (
-      <div>
-        <LoanHeader loantitle={"Asset Finance"}></LoanHeader>
-        <AssetFinanceBody>
+      <LoanMain>
+        <LoanHeader
+          loantitle={"Asset Finance"}
+          loanHeadLink={"Asset Finance"}
+        ></LoanHeader>
+        <LoanBody>
           <div className="assetWrapper">
             <div className="leftAsset">
-              <Title>
+              <LoanTitle>
                 <h5>Product Description</h5>
-              </Title>
+              </LoanTitle>
               <div className="assetText">
                 <p>
                   This is a short term form of financing that will help members
@@ -156,8 +89,8 @@ const AssetFinance = () => {
               <SidebarLoanLinks />
             </div>
           </div>
-        </AssetFinanceBody>
-      </div>
+        </LoanBody>
+      </LoanMain>
     );
 }
 

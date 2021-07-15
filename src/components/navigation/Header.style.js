@@ -119,6 +119,16 @@ const Navwrapper = styled.div`
     transform-origin: center;
   }
 
+  ${media.mobile} {
+    & .nav-item::after {
+      display: none;
+    }
+    & li.nav-item a.nav-link:focus {
+      cursor: pointer;
+      color: #76bf30;
+    }
+  }
+
   ${media.laptop} {
   }
 `;
@@ -126,7 +136,7 @@ const Navwrapper = styled.div`
 const Header = () => {
 
   return (
-    <div>
+    <div style={{overflowX: 'hidden'}}>
       <Navwrapper>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <Link class="navbar-brand" to="/">

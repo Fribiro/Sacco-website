@@ -74,6 +74,40 @@ const Mainwrapper = styled.div`
   ${media.mobile} {
     flex-direction: column;
 
+    & .container {
+      width: 100%;
+      flex-wrap: wrap;
+    }
+
+    & .box {
+      margin:  0.5rem;
+    }
+
+    & .icon {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    & .icon svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    & .counter {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    & .text {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    & #loans-awarded {
+      font-size: .7rem;
+      padding: 0;
+    }
+
     & .counterImg {
       display: none;
     }

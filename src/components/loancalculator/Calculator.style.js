@@ -1,6 +1,14 @@
 import React, { useState } from 'react'
 import styled from "styled-components";
 
+const media = {
+  mobile: "@media (max-width: 480px)",
+  tablet: "@media (min-width: 481px) and (max-width: 768px)",
+  laptop: "@media (min-width: 769px) and (max-width: 1024px)",
+  desktop: "@media (min-width: 1025px) and (max-width: 1200px)",
+  extralarge: "@media (min-width: 1201px)",
+};
+
 const Mainwrapper = styled.div`
     margin-top: 4.9rem;
     //height: 40rem;
@@ -27,7 +35,13 @@ const Title = styled.div`
     width: 12rem;
     margin: 7px auto 5px;
   }
-` 
+
+  ${media.mobile} {
+  }
+
+  ${media.tablet} {
+  }
+`; 
 const Calc = styled.div`
   height: 30rem;
   display: flex;
@@ -142,6 +156,28 @@ const Calc = styled.div`
     border-radius: 2rem;
     width: 10rem;
   }
+  ${media.mobile} {
+    height: fit-content;
+
+    & .calc-container {
+      width: 80%;
+      flex-direction: column;
+    }
+    & .calc-output {
+      width: 100%;
+    }
+    & .frozen-glass {
+      margin: 1rem;
+      height: 100%;
+    }
+
+    & .calc-form {
+      width: 100%;
+    }
+  }
+
+  ${media.tablet} {
+  }
 `;
 
 const Disclaimer = styled.div`
@@ -154,8 +190,15 @@ const Disclaimer = styled.div`
   & .disclaimerLeft {
     width: 70%;
   }
+  ${media.mobile} {
+    & .disclaimerLeft {
+      width: 85%;
+    }
+  }
 
-`
+  ${media.tablet} {
+  }
+`;
 
 const DisclaimerTitle = styled.h2`
   width: 50%;
@@ -165,13 +208,26 @@ const DisclaimerTitle = styled.h2`
     margin-top: 0;
     font-family: "Abril Fatface", cursive;
   }
-`
+
+  ${media.mobile} {
+  }
+
+  ${media.tablet} {
+  }
+`;
 
 const DisclaimerText = styled.ul`
   width: 70%;
   display: inline-block;
-  list-style: lower-roman;
-`
+  list-style: circle solid black;
+
+  ${media.mobile} {
+    width: 100%;
+  }
+
+  ${media.tablet} {
+  }
+`;
 
 const Calculator = () => {
     const [principal, setPrincipal] = useState("")

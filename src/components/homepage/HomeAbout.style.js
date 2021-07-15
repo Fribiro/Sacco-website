@@ -75,7 +75,7 @@ const Main = styled.div`
 
   ${media.mobile} {
     margin: 2rem 0;
-    height: 42rem;
+    height: 45rem;
 
     & .aboutWrapper {
       flex-direction: column;
@@ -96,7 +96,7 @@ const Main = styled.div`
     }
 
     & .aboutButton {
-      width: 6rem;
+      width: 7rem;
       height: 2rem;
     }
   }

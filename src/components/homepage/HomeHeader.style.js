@@ -46,23 +46,6 @@ const Headerhome = styled.div`
     width: 70%;
   }
 
-  & .headerText {
-    position: absolute;
-    vertical-align: middle;
-    justify-content: center;
-    text-align: center;
-    width: 40rem;
-    margin: 23rem 0 0 20rem;
-  }
-
-  & .headerText h1 {
-    font-family: "Abril Fatface", cursive;
-    color: rgb(118, 191, 48);
-  }
-  & .headerText p {
-    color: #fff;
-  }
-
   & button {
     border: 0;
     outline: none;
@@ -81,21 +64,38 @@ const Headerhome = styled.div`
       height: 100%;
     }
 
+    & .carousel-item {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    & .carousel-item img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
     & .carousel-inner {
       height: 100%;
     }
 
-    & .headerText {
-      width: 20rem;
-      margin: 9rem 0 0 2rem;
+    & .carousel-caption {
+      bottom: 2rem;
     }
 
-    & .headerText h1 {
-      font-family: "Abril Fatface", cursive;
-      color: rgb(118, 191, 48);
+    & .carousel-caption h1 {
     }
-    & .headerText p {
+
+    & .carousel-caption p {
       display: none;
+    }
+
+    & button {
+      width: 7rem;
+      height: 2rem;
+      font-size: 1rem;
     }
   }
 
@@ -117,26 +117,10 @@ const Headerhome = styled.div`
   }
 `;
 
-const Bgimg = styled.div`
-  position: absolute;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  display: block;
-  background: url("/img/graphs.jpg") no-repeat center / cover;
-  filter: brightness(40%);
-`;
 
 const Homeheader = () => {
     return (
       <Headerhome>
-        {/* <Bgimg></Bgimg> */}
-        {/* <div className="headerText">
-                <h1>Instant Loans</h1>
-                <p>Unik Sacco is one of the accredited saccos found within Nairobi that has been established under strict adherance to the Kenyan Laws.Save with us, get loans and grow with us.</p>
-            </div> */}
         <Carousel fade>
           <Carousel.Item interval={1500}>
             <img
