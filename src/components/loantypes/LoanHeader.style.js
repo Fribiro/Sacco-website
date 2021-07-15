@@ -42,7 +42,7 @@ const LoanHeaderWrapper = styled.div`
   & .loanHeadlink {
     position: absolute;
     top: 15rem;
-    left: 6rem;
+    left: 4rem;
     z-index: 1;
     color: rgba(255, 255, 255, 0.9);
     font-family: "Crimson Text", serif;

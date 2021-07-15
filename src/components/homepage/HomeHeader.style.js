@@ -27,6 +27,10 @@ const Headerhome = styled.div`
     filter: brightness(50%);
   }
 
+  & .carousel-item {
+    //transition: opacity 1s ease-in-out;
+  }
+
   & .carousel-caption {
     bottom: 12rem;
     display: flex;
@@ -148,7 +152,7 @@ const Homeheader = () => {
     return (
       <Headerhome>
         <Carousel fade>
-          <Carousel.Item interval={1500}>
+          <Carousel.Item interval={2000}>
             <img
               className="d-block w-100"
               src="/img/graphs.jpg"
@@ -168,7 +172,7 @@ const Homeheader = () => {
               </button>
             </Carousel.Caption>
           </Carousel.Item>
-          <Carousel.Item interval={1500}>
+          <Carousel.Item interval={2000}>
             <img
               className="d-block w-100"
               src="/img/desk7.jpg"
@@ -189,7 +193,7 @@ const Homeheader = () => {
               </button>
             </Carousel.Caption>
           </Carousel.Item>
-          <Carousel.Item interval={1500}>
+          <Carousel.Item interval={2000}>
             <img
               className="d-block w-100"
               src="/img/desk9.jpg"
