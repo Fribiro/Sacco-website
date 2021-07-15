@@ -57,6 +57,21 @@ const SidebarAboutWrapper = styled.div`
   & #aboutBtn > svg {
     margin: 0 1rem 0 0;
   }
+
+  ${media.tablet} {
+    & #aboutBtn {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    & h5 {
+      font-size: 1.2rem;
+    }
+
+    & ul > li {
+      font-size: 1rem;
+    }
+  }
 `;
 
 const MembershipForm = styled.button`

@@ -75,6 +75,23 @@ const AboutHeaderWrapper = styled.div`
     }
   }
   ${media.tablet} {
+    margin-top: 7vh;
+
+    & .aboutTitleType {
+      left: 2rem;
+    }
+    & .aboutHeadlink {
+      top: 29vh;
+      left: 0;
+    }
+
+    & .aboutHeadlink a {
+      color: rgba(255, 255, 255, 0.9);
+      font-family: "Crimson Text", serif;
+      padding-left: 1rem;
+      font-size: 1.2rem;
+      text-decoration: none;
+    }
   }
 `;
 

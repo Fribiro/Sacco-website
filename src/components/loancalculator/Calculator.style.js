@@ -177,6 +177,24 @@ const Calc = styled.div`
   }
 
   ${media.tablet} {
+    height: fit-content;
+
+    & .calc-container {
+      width: 90%;
+      height: 100%;
+    }
+    & .calc-output {
+      width: 100%;
+      height: 100%;
+    }
+    & .frozen-glass {
+      margin: 1rem;
+      height: 100%;
+    }
+
+    & .calc-form {
+      width: 100%;
+    }
   }
 `;
 
@@ -226,6 +244,7 @@ const DisclaimerText = styled.ul`
   }
 
   ${media.tablet} {
+    width: 100%;
   }
 `;
 

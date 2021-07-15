@@ -10,7 +10,7 @@ const media = {
 };
 
 export const LoanMain = styled.div`
-  overflow-x: hidden !important;
+  overflow-x: hidden;
 `;
 
 export const LoanBody = styled.div`
@@ -76,6 +76,13 @@ export const LoanBody = styled.div`
     }
   }
   ${media.tablet} {
+    & .assetWrapper {
+      width: 87%;
+    }
+
+    & .rightAsset {
+      margin-left: 1rem;
+    }
   }
 `;
 

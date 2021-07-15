@@ -63,6 +63,7 @@ const LoanHeaderWrapper = styled.div`
       left: 2rem;
     }
     & .loanHeadlink {
+      top: 20rem;
       left: 0;
     }
 
@@ -75,6 +76,23 @@ const LoanHeaderWrapper = styled.div`
     }
   }
   ${media.tablet} {
+    margin-top: 7vh;
+
+    & .loanTitleType {
+      left: 2rem;
+    }
+    & .loanHeadlink {
+      top: 18rem;
+      left: 0;
+    }
+
+    & .loanHeadlink a {
+      color: rgba(255, 255, 255, 0.9);
+      font-family: "Crimson Text", serif;
+      padding-left: 1rem;
+      font-size: 1.2rem;
+      text-decoration: none;
+    }
   }
 `;
 

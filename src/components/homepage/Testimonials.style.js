@@ -42,28 +42,12 @@ const Mainwrapper = styled.div`
     text-align: center;
   }
 
-  & .testimonials h2 {
-    text-align: center;
-    font-weight: bold;
-    color: #3db2c7;
-    padding-bottom: 10px;
-  }
-
-  & .testimonials h2::after {
-    content: "";
-    background: #3db2c7;
-    display: block;
-    height: 3px;
-    width: 170px;
-    margin: 7px auto 5px;
-  }
-
   & .testimonials .row {
-    margin-top: 30px;
+    margin-top: 1.8rem;
   }
 
   & .col-md-4 {
-    margin: 40px auto;
+    margin: 2.5rem auto;
   }
 
   & .profile {
@@ -78,12 +62,12 @@ const Mainwrapper = styled.div`
     top: -60px;
     position: absolute;
     left: calc(50% - 60px);
-    border: 10px solid white;
+    border: 0.63rem solid white;
   }
 
   & .user {
-    width: 120px;
-    height: 120px;
+    width: 7.5rem;
+    height: 7.5rem;
     border-radius: 50%;
   }
   & .testimonialmember {
@@ -94,8 +78,8 @@ const Mainwrapper = styled.div`
   }
 
   & .profile h3 {
-    font-size: 20px;
-    margin-top: 15px;
+    font-size: 1.25rem;
+    margin-top: 0.94rem;
     color: rgba(118, 191, 48, 0.9);
     font-family: "Crimson Text", serif;
     font-weight: bold;
@@ -120,9 +104,9 @@ const Mainwrapper = styled.div`
     font-size: 3rem;
     position: relative;
     color: rgba(118, 191, 48, 0.9);
-    line-height: 20px;
-    bottom: -15px;
-    right: 5px;
+    line-height: 1.25rem;
+    bottom: -0.94rem;
+    right: 0.31rem;
   }
 
   & blockquote::after {
@@ -130,13 +114,13 @@ const Mainwrapper = styled.div`
     font-size: 3rem;
     position: relative;
     color: rgba(118, 191, 48, 0.9);
-    line-height: 10px;
-    bottom: -15px;
-    left: 5px;
+    line-height: 0.63rem;
+    bottom: -0.94rem;
+    left: 0.31rem;
   }
 
   & .profile:hover {
-    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 0.94rem 0.94rem rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: 0.5s;
   }
@@ -144,6 +128,16 @@ const Mainwrapper = styled.div`
   ${media.mobile} {
     & .testimonials {
       margin: 1rem 2rem;
+      height: fit-content;
+    }
+  }
+  ${media.tablet} {
+    & .testimonials {
+      margin: 1rem;
+      height: fit-content;
+    }
+
+    & .profile {
       height: fit-content;
     }
   }
@@ -168,7 +162,7 @@ const Title = styled.div`
     display: block;
     height: 0.2rem;
     width: 10rem;
-    margin: 7px auto 5px;
+    margin: 0.44rem auto .31rem;
   }
 `;
 

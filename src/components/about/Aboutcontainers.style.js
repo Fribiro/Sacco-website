@@ -39,6 +39,7 @@ export const Aboutwrapper = styled.div`
   }
 
   ${media.tablet} {
+    width: 90%;
   }
 `;
 
@@ -82,6 +83,7 @@ export const AboutText = styled.div`
   }
 
   ${media.tablet} {
+    
   }
 `;
 
@@ -100,6 +102,8 @@ export const RightAbout = styled.div`
   }
 
   ${media.tablet} {
+    margin-left: 2rem;
+
   }
 `; 
 

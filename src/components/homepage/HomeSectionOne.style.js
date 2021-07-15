@@ -48,7 +48,7 @@ const Main = styled.div`
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 
   & .icons {
@@ -106,11 +106,12 @@ const Main = styled.div`
     }
 
     & .sectionOneWrapper {
+      width: 90%;
     }
 
     & .col {
-      padding: 0.1rem 0.3rem;
-      margin: 0 0.2rem;
+      padding: 0.1rem 0.7rem;
+      margin: 0 0.6rem;
       box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
     }
 
@@ -121,7 +122,7 @@ const Main = styled.div`
     }
 
     & .col p {
-      font-size: 0.85rem;
+      font-size: 0.9rem;
     }
 
     & .icons {

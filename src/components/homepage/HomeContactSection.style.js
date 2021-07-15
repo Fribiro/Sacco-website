@@ -184,9 +184,12 @@ const ContactWrapper = styled.div`
     flex-direction: column;
     margin: 2rem 1rem;
     height: 55rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     & .contactBox {
-      width: 100%;
+      width: 90%;
     }
 
     & .mapouter {

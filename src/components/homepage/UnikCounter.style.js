@@ -80,7 +80,7 @@ const Mainwrapper = styled.div`
     }
 
     & .box {
-      margin:  0.5rem;
+      margin: 0.5rem;
     }
 
     & .icon {
@@ -103,11 +103,6 @@ const Mainwrapper = styled.div`
       font-weight: bold;
     }
 
-    & #loans-awarded {
-      font-size: .7rem;
-      padding: 0;
-    }
-
     & .counterImg {
       display: none;
     }
@@ -118,6 +113,20 @@ const Mainwrapper = styled.div`
   }
 
   ${media.tablet} {
+    justify-content: center;
+    align-items: center;
+
+    & .counterImg {
+      display: none;
+    }
+
+    & .container {
+      width: 100%;
+    }
+
+    & .box {
+      margin: 1rem;
+    }
   }
 `;
 
@@ -163,7 +172,7 @@ const UnikCounter = () => {
               <div className="counter">
                 <CountUp start={0} end={200} duration={5} />
               </div>
-              <div className="text">Loans Awarded</div>
+              <div className="text" >Loans Awarded</div>
             </div>
           </div>
         </Mainwrapper>

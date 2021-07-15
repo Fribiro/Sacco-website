@@ -100,19 +100,45 @@ const Headerhome = styled.div`
   }
 
   ${media.tablet} {
-    height: 60vh;
+    height: 40vh;
+    margin-top: 7vh;
 
-    & .headerText {
-      width: 30rem;
-      margin: 12rem 0 0 5rem;
+    & .carousel.slide.carousel-fade {
+      height: 100%;
     }
 
-    & .headerText h1 {
-      font-family: "Abril Fatface", cursive;
-      color: rgb(118, 191, 48);
+    & .carousel-item {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
-    & .headerText p {
-      color: #fff;
+
+    & .carousel-item img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    & .carousel-inner {
+      height: 100%;
+    }
+
+    & .carousel-caption {
+      bottom: 8rem;
+    }
+
+    & .carousel-caption h1 {
+    }
+
+    & .carousel-caption p {
+      display: none;
+    }
+
+    & button {
+      width: 9rem;
+      height: 3rem;
+      font-size: 1.3rem;
     }
   }
 `;

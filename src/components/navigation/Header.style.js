@@ -16,7 +16,7 @@ const Navwrapper = styled.div`
   top: 0;
   z-index: 2;
   background-color: #f8f9fa !important;
-  width: 100%;
+  width: 100vw;
   box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
 
   & .navbar {
@@ -129,7 +129,10 @@ const Navwrapper = styled.div`
     }
   }
 
-  ${media.laptop} {
+  ${media.tablet} {
+    & .nav-item::after {
+      display: none;
+    }
   }
 `;
 

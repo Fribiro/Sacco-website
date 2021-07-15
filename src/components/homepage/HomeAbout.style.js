@@ -102,6 +102,8 @@ const Main = styled.div`
   }
 
   ${media.tablet} {
+    height: 40rem;
+
     & .aboutWrapper {
       width: 95%;
     }
@@ -110,14 +112,13 @@ const Main = styled.div`
     }
     & .aboutRightSection {
       width: 60%;
-      height: 66%;
-      background: transparent;
-      backdrop-filter: brightness(70%);
+      height: 65%;
       padding: 1.6rem;
+      text-align: justify;
     }
 
     & .aboutRightSection .content p {
-      color: #fff;
+      
     }
   }
 `;

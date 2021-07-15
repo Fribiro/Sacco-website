@@ -170,7 +170,7 @@ const Footerwrapper = styled.div`
     grid-column: 1;
     grid-row: 1;
     outline: none;
-    padding-left: .5rem;
+    padding-left: 0.5rem;
   }
 
   & .segment-four form input[type="submit"] {
@@ -178,9 +178,9 @@ const Footerwrapper = styled.div`
     grid-row: 1;
     background: #333;
     border: none;
-    padding: 3px 9px;
+    padding: 0.19rem 0.56rem;
     color: #fff;
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 600;
     justify-content: center;
     text-align: center;
@@ -211,11 +211,25 @@ const Footerwrapper = styled.div`
     .segment-two,
     .segment-three,
     .segment-four {
-      padding: 1rem 2rem;
+      padding: 1rem;
     }
 
     & .segment-four form input[type="submit"] {
-      padding: 3px 3px;
+      padding: 0.2rem;
+    }
+
+    & .segment-four form {
+      display: grid;
+      grid-template-columns: 60% 40%;
+    }
+
+    & .segment-four form input[type="submit"] {
+      width: 100%;
+      font-size: 0.6rem;
+    }
+
+    & .segment-four form input[type="email"] {
+      padding-left: 0.3rem;
     }
   }
 `;

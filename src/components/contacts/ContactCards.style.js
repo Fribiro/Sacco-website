@@ -68,6 +68,14 @@ const Contactheader = styled.div`
       color: #fff;
     }
   }
+
+  ${media.tablet} {
+    height: 40vh;
+
+    & .headerText {
+      width: 70%;
+    }
+  }
 `;
 
 const Main = styled.div`
@@ -218,7 +226,7 @@ const Main = styled.div`
   }
 
   ${media.tablet} {
-    padding: 0 1rem;
+    padding: 2rem 1rem;
     height: 25rem;
 
     & .title {
