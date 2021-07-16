@@ -61,6 +61,10 @@ const SidebarAboutWrapper = styled.div`
     margin: 0 1rem 0 0;
   }
 
+  & #aboutBtn > a {
+    color: #fff;
+  }
+
   ${media.tablet} {
     & #aboutBtn {
       font-size: 1rem;
