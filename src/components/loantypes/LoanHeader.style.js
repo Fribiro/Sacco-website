@@ -63,7 +63,6 @@ const LoanHeaderWrapper = styled.div`
       left: 2rem;
     }
     & .loanHeadlink {
-      top: 20rem;
       left: 0;
     }
 

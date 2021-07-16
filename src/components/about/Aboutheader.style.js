@@ -63,6 +63,7 @@ const AboutHeaderWrapper = styled.div`
       left: 2rem;
     }
     & .aboutHeadlink {
+      top: 15rem;
       left: 0;
     }
 

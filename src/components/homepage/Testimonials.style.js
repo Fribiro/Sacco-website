@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from "styled-components";
-import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const media = {
   mobile: "@media (min-width: 320px) and (max-width: 480px)",

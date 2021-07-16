@@ -110,6 +110,7 @@ const Main = styled.div`
     flex-direction: column;
     margin: 0 0.7rem;
     //border: 0.1rem solid rgba(51, 51, 51, .5);
+    background-color: #333;
     box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
   }
 
@@ -122,12 +123,12 @@ const Main = styled.div`
 
   & .cardOne,
   .cardFour {
-    border-top: 0.4rem solid rgba(0, 0, 0, 0.6);
+    border-top: 0.4rem solid rgba(118, 191, 48, 0.9);
   }
 
   & .cardTwo,
   .cardThree {
-    border-top: 0.4rem solid rgba(0, 0, 0, 0.6);
+    border-top: 0.4rem solid rgba(118, 191, 48, 0.9);
   }
 
   & .col,
@@ -169,6 +170,7 @@ const Main = styled.div`
     text-align: center;
     font-size: 1rem;
     font-family: "Crimson Text", serif;
+    color: #fff;
   }
 
   & .icons {
@@ -212,7 +214,7 @@ const Main = styled.div`
     & .col1,
     .col2,
     .col3 {
-      padding: .2rem 1rem ;
+      padding: 0.2rem 1rem;
     }
 
     & .col p {
@@ -316,7 +318,7 @@ const ContactCards = () => {
                 </div>
                 <h3>Phone</h3>
                 <p>
-                  +254 792 767 676 <br /> +254 721 540 078
+                  +254 721 540 078
                 </p>
               </div>
             </div>

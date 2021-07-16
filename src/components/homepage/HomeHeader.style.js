@@ -161,7 +161,7 @@ const Homeheader = () => {
             <Carousel.Caption>
               <h1>Instant Loans</h1>
               <p>
-                Uniq Sacco is one of the accredited saccos found within Nairobi
+                UNIK SACCO is one of the accredited saccos found within Nairobi
                 that has been established under strict adherance to the Kenyan
                 Laws.Save with us, get loans and grow with us.
               </p>
@@ -182,7 +182,7 @@ const Homeheader = () => {
             <Carousel.Caption>
               <h1>Instant Loans</h1>
               <p>
-                Unik Sacco is one of the accredited saccos found within Nairobi
+                UNIK SACCO is one of the accredited saccos found within Nairobi
                 that has been established under strict adherance to the Kenyan
                 Laws.Save with us, get loans and grow with us.
               </p>
@@ -203,7 +203,7 @@ const Homeheader = () => {
             <Carousel.Caption>
               <h1>Instant Loans</h1>
               <p>
-                Uniq Sacco is one of the accredited saccos found within Nairobi
+                UNIK SACCO is one of the accredited saccos found within Nairobi
                 that has been established under strict adherance to the Kenyan
                 Laws.Save with us, get loans and grow with us.
               </p>

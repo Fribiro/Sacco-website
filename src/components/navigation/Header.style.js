@@ -198,7 +198,7 @@ const Header = () => {
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
-                  Loan Products
+                  Sacco Products
                 </Link>
                 <div
                   class="dropdown-menu"

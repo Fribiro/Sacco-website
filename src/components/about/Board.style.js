@@ -7,10 +7,8 @@ import {
   AboutBody,
   AboutMain,
   Aboutwrapper,
-  LeftAbout,
-  RightAbout,
 } from "./Aboutcontainers.style";
-import SidebarAbout from "./SidebarAbout.style";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Boardwrapper = styled.div`
   & .row {
@@ -51,15 +49,22 @@ const Boardwrapper = styled.div`
     border: 2px solid rgba(118, 191, 48, 0.9);
   }
 
+  & .bodImg svg{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+  }
+
   & .bodTitle {
     height: 45%;
     width: 100%;
-    background-color: rgb(216, 215, 215);
+    background-color: rgb(54, 54, 54);
     color: rgba(118, 191, 48, 0.9);//#555
     padding: 125px 25px 25px;
     margin-top: -100px;
     display: inline-block;
-    box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 7px 29px 0px;
   }
 
   & .bodTitle h5 {
@@ -91,19 +96,21 @@ const Board = () => {
               <div className="row">
                 <div className="bod col-md-3">
                   <div className="bodImg">
-                    <img src="/img/user1.jpg" alt="" />
+                    {/*<img src="/img/user1.jpg" alt="" /> */}
+                    <FontAwesomeIcon icon="user" />
                   </div>
                   <div className="bodTitle">
                     <div className="top-bodTitle"></div>
                     <div className="bottom-bodTitle">
                       <h5>Lucy Kamura</h5>
-                      <h5>Chairlady</h5>
+                      <h5>Chairperson</h5>
                     </div>
                   </div>
                 </div>
                 <div className="bod col-md-3">
                   <div className="bodImg">
-                    <img src="/img/user1.jpg" alt="" />
+                    {/* <img src="/img/user1.jpg" alt="" /> */}
+                    <FontAwesomeIcon icon="user" />
                   </div>
                   <div className="bodTitle">
                     <div className="top-bodTitle"></div>
@@ -115,7 +122,8 @@ const Board = () => {
                 </div>
                 <div className="bod col-md-3">
                   <div className="bodImg">
-                    <img src="/img/user1.jpg" alt="" />
+                    {/* <img src="/img/user1.jpg" alt="" /> */}
+                    <FontAwesomeIcon icon="user" />
                   </div>
                   <div className="bodTitle">
                     <div className="top-bodTitle"></div>
@@ -127,37 +135,40 @@ const Board = () => {
                 </div>
                 <div className="bod col-md-3">
                   <div className="bodImg">
-                    <img src="/img/user1.jpg" alt="" />
+                    {/* <img src="/img/user1.jpg" alt="" /> */}
+                    <FontAwesomeIcon icon="user" />
                   </div>
                   <div className="bodTitle">
                     <div className="top-bodTitle"></div>
                     <div className="bottom-bodTitle">
-                      <h5>Lucy Kamura</h5>
-                      <h5>Chairlady</h5>
+                      <h5>Titus Njagi</h5>
+                      <h5>Secretary</h5>
                     </div>
                   </div>
                 </div>
                 <div className="bod col-md-3">
                   <div className="bodImg">
-                    <img src="/img/user1.jpg" alt="" />
+                    {/* <img src="/img/user1.jpg" alt="" /> */}
+                    <FontAwesomeIcon icon="user" />
                   </div>
                   <div className="bodTitle">
                     <div className="top-bodTitle"></div>
                     <div className="bottom-bodTitle">
-                      <h5>Lucy Kamura</h5>
-                      <h5>Chairlady</h5>
+                      <h5>Cynthia Njeri</h5>
+                      <h5>Member</h5>
                     </div>
                   </div>
                 </div>
                 <div className="bod col-md-3">
                   <div className="bodImg">
-                    <img src="/img/user1.jpg" alt="" />
+                    {/* <img src="/img/user1.jpg" alt="" /> */}
+                    <FontAwesomeIcon icon="user" />
                   </div>
                   <div className="bodTitle">
                     <div className="top-bodTitle"></div>
                     <div className="bottom-bodTitle">
-                      <h5>Lucy Kamura</h5>
-                      <h5>Chairlady</h5>
+                      <h5>Isaac </h5>
+                      <h5>Member</h5>
                     </div>
                   </div>
                 </div>

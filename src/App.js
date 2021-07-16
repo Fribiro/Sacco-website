@@ -19,6 +19,9 @@ import {
   faUser,
   faEnvelope,
   faFilePdf,
+  faBalanceScale,
+  faShieldAlt,
+  faClipboardList,
 } from "@fortawesome/free-solid-svg-icons";
 
 import Contact from './components/contacts/Contact';
@@ -48,6 +51,9 @@ library.add(
   faUser,
   faEnvelope,
   faFilePdf,
+  faBalanceScale,
+  faShieldAlt,
+  faClipboardList,
 );
 
 function App() {

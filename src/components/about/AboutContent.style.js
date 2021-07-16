@@ -8,10 +8,13 @@ import {
   AboutMain,
   AboutText,
   Aboutwrapper,
+  CenterLine,
   LeftAbout,
   RightAbout,
+  VerticalProgress,
 } from "./Aboutcontainers.style";
 import SidebarAbout from "./SidebarAbout.style";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Whowrapper = styled.div`
   & #aboutDets {
@@ -62,8 +65,6 @@ const AboutContent = () => {
                     Being pro-active in equitable wealth creation and management
                     in response to the member’s needs.
                   </p>
-                  <h5>Our Core Values</h5>
-                  <p></p>
                 </AboutText>
               </LeftAbout>
               <RightAbout>
@@ -72,6 +73,69 @@ const AboutContent = () => {
             </Aboutwrapper>
           </AboutBody>
         </Whowrapper>
+        <VerticalProgress>
+          <h5>Our Core Values</h5>
+          <div className="vertical-progress-parent">
+            {/* <h5>Our Core Values</h5> */}
+            <div className="center-line"></div>
+            <div className="row row-1">
+              <section>
+                <div className="vertical-progress-icons">
+                  <FontAwesomeIcon icon="balance-scale" />
+                </div>
+                <div className="view-progress-details">
+                  <h6 className="view-progress-title">Equality</h6>
+                  <p>
+                    All SACCO members are given equal opportunities to promote
+                    themselves through savings and deposits.
+                  </p>
+                </div>
+              </section>
+            </div>
+            <div className="row row-2">
+              <section>
+                <div className="vertical-progress-icons">
+                  <FontAwesomeIcon icon="shield-alt" />
+                </div>
+                <div className="view-progress-details">
+                  <h6 className="view-progress-title">Confidentiality </h6>
+                  <p>
+                    All stakeholders are advised to observe utmost
+                    confidentiality regarding society matters.
+                  </p>
+                </div>
+              </section>
+            </div>
+            <div className="row row-1">
+              <section>
+                <div className="vertical-progress-icons">
+                  <FontAwesomeIcon icon="hands-helping" size="1rem" />
+                </div>
+                <div className="view-progress-details">
+                  <h6 className="view-progress-title">Integrity</h6>
+                  <p>
+                    Staff and management possess and adhere to high moral
+                    principles, ethics and professional standards
+                  </p>
+                </div>
+              </section>
+            </div>
+            <div className="row row-2">
+              <section>
+                <div className="vertical-progress-icons">
+                  <FontAwesomeIcon icon="clipboard-list" />
+                </div>
+                <div className="view-progress-details">
+                  <h6 className="view-progress-title">Accountability</h6>
+                  <p>
+                    The SACCO strives to carry out all its dealings in an
+                    accountable manner.
+                  </p>
+                </div>
+              </section>
+            </div>
+          </div>
+        </VerticalProgress>
         <Footer />
       </AboutMain>
     );
