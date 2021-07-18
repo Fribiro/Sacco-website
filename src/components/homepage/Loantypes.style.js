@@ -169,7 +169,7 @@ const Title = styled.div`
 
 const Loantypes = () => {
     return (
-      <LoanWrapper>
+      <LoanWrapper name="loans">
         <Title>
           <h2>Loans</h2>
         </Title>

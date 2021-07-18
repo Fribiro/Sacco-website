@@ -61,6 +61,10 @@ const Headerhome = styled.div`
     font-size: 1.3rem;
   }
 
+  & button:focus {
+    background-color: #333;
+  }
+
   ${media.mobile} {
     height: 30vh;
 
@@ -166,7 +170,7 @@ const Homeheader = () => {
                 Laws.Save with us, get loans and grow with us.
               </p>
               <button>
-                <Link to="" spy={true} smooth={true}>
+                <Link to="loans" spy={true} smooth={true}>
                   Read More
                 </Link>
               </button>
@@ -180,11 +184,11 @@ const Homeheader = () => {
             />
 
             <Carousel.Caption>
-              <h1>Instant Loans</h1>
+              <h1>Who is UNIK?</h1>
               <p>
-                UNIK SACCO is one of the accredited saccos found within Nairobi
-                that has been established under strict adherance to the Kenyan
-                Laws.Save with us, get loans and grow with us.
+                UNIK SACCO was registered as a Savings and Credit Co-operative Society in
+                2021. It's now one of the deposit-taking Saccos in Kenya, licensed and regulated by
+                SASRA ( Sacco Societies Regulatory Authority).
               </p>
               <button>
                 <Link to="about" spy={true} smooth={true}>
@@ -201,15 +205,13 @@ const Homeheader = () => {
             />
 
             <Carousel.Caption>
-              <h1>Instant Loans</h1>
+              <h1>Have any question?</h1>
               <p>
-                UNIK SACCO is one of the accredited saccos found within Nairobi
-                that has been established under strict adherance to the Kenyan
-                Laws.Save with us, get loans and grow with us.
+                Need any clarification or more information on any of our products; don't hesitate to reach us through our various channels. Also feel free to leave us a comment that will go a long way in helping us serve you best.
               </p>
               <button>
-                <Link to="about" spy={true} smooth={true}>
-                  Read More
+                <Link to="contact" spy={true} smooth={true}>
+                  Contact Us
                 </Link>
               </button>
             </Carousel.Caption>

@@ -137,10 +137,9 @@ const Navwrapper = styled.div`
 `;
 
 const Header = () => {
-
   return (
     <div style={{overflowX: 'hidden'}}>
-      <Navwrapper>
+      <Navwrapper name="pagetop">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <Link class="navbar-brand" to="/">
             <img src="uniqlogo.png"></img>

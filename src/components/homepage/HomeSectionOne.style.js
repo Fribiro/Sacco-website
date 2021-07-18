@@ -36,6 +36,8 @@ const Main = styled.div`
     align-items: center;
     flex-direction: column;
     margin: 0 0.7rem;
+    background-color: #333;
+    color: #fff;
     box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
   }
 

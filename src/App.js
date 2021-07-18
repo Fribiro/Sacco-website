@@ -22,6 +22,7 @@ import {
   faBalanceScale,
   faShieldAlt,
   faClipboardList,
+  faChevronUp,
 } from "@fortawesome/free-solid-svg-icons";
 
 import Contact from './components/contacts/Contact';
@@ -35,6 +36,7 @@ import Normal from './components/loantypes/Normal';
 import AboutContent from './components/about/AboutContent.style';
 import Board from './components/about/Board.style';
 import Membership from './components/about/Membership.style';
+import ScrollUp from './components/ScrollUp';
 
 library.add(
   fab,
@@ -54,6 +56,7 @@ library.add(
   faBalanceScale,
   faShieldAlt,
   faClipboardList,
+  faChevronUp,
 );
 
 function App() {
@@ -75,6 +78,7 @@ function App() {
           <Route exact path="/normal-loan" component={Normal} />
         </Switch>
       </Router>
+      <ScrollUp showBelow={2500} />
     </div>
   );
 }

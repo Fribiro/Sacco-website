@@ -219,7 +219,7 @@ const ContactWrapper = styled.div`
 const HomeContactSection = () => {
   return (
     <div>
-      <ContactWrapper>
+      <ContactWrapper name="contact">
         <div className="contactBox">
           <div className="contactIcons">
             <div className="iconContainer" id="address">
