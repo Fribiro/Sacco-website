@@ -61,6 +61,10 @@ const Navwrapper = styled.div`
     border: 0;
   }
 
+  & .dropdown-item:hover {
+    color: #76bf30;
+  }
+
   & .dropdown-item:focus {
     color: #fff;
     background-color: #76bf30;
@@ -129,7 +133,7 @@ const Navwrapper = styled.div`
     }
     & .dropdown-menu a .dropdown-item:focus {
       color: #fff;
-      background-color: #76bf30;
+      background-color: #76bf30 !important;
     }
   }
 
