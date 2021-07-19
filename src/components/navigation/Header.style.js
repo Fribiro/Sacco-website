@@ -127,11 +127,19 @@ const Navwrapper = styled.div`
       cursor: pointer;
       color: #76bf30;
     }
+    & .dropdown-menu a .dropdown-item:focus {
+      color: #fff;
+      background-color: #76bf30;
+    }
   }
 
   ${media.tablet} {
     & .nav-item::after {
       display: none;
+    }
+    & .dropdown-item:focus {
+      color: #fff;
+      background-color: #76bf30;
     }
   }
 `;
@@ -142,7 +150,7 @@ const Header = () => {
       <Navwrapper name="pagetop">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <Link class="navbar-brand" to="/">
-            <img src="uniqlogo.png"></img>
+            <img src="uniklogo.png"></img>
           </Link>
           <button
             class="navbar-toggler"
