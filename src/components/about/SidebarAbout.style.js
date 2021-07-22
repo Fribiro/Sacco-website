@@ -153,7 +153,7 @@ const SidebarAbout = () => {
             </p>
             <button id="aboutBtn">
               <FontAwesomeIcon icon="envelope" />
-              <Link>GET IN TOUCH</Link>
+              <Link to="contacts">GET IN TOUCH</Link>
             </button>
           </SidebarAboutWrapper>
         </SidebarAboutMain>

@@ -268,7 +268,7 @@ const Calculator = () => {
 
       const totalInterest = totalPayment - principal;
 
-      const monthlyPayment = totalPayment/(12 * duration);
+      const monthlyPayment = totalPayment/(duration);
 
       setMonthlyPayment(monthlyPayment.toFixed(2));
       setTotalInterest(totalInterest.toFixed(2));

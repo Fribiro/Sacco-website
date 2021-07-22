@@ -144,7 +144,7 @@ const HomeAbout = () => {
                   competitive products portfolio, strong market positioning and
                   digital presence.
                 </p>
-                <button className="aboutButton"><Link to="/about">Read More</Link></button>
+                <button className="aboutButton"><Link to="/who-we-are">Read More</Link></button>
               </div>
             </div>
           </div>

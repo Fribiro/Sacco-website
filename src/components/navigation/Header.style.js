@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom"
-import { Navbar, Nav, NavDropdown }from "react-bootstrap";
 
 const media = {
   mobile: "@media (min-width: 320px) and (max-width: 480px)",
