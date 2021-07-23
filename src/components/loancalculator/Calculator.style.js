@@ -264,7 +264,9 @@ const Calculator = () => {
       //e.preventDefault();
       //A = P(1 + r/n)^nt
 
-      const totalPayment = (principal * Math.pow((1 + (interest/(12*100))), (12 * duration)));
+      const timePeriod = (duration/12)
+
+      const totalPayment = (principal * Math.pow((1 + (interest/(12*100))), (12 * timePeriod)));
 
       const totalInterest = totalPayment - principal;
 
