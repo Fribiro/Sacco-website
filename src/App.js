@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import './App.css'
+import { Helmet } from "react-helmet";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Homepage from './components/homepage/Homepage'
 
@@ -38,6 +38,7 @@ import Board from './components/about/Board.style';
 import Membership from './components/about/Membership.style';
 import ScrollUp from './components/ScrollUp';
 import BeatLoader from 'react-spinners/BeatLoader';
+import MetaDecorator from './components/utils/Metadecorator';
 
 library.add(
   fab,
@@ -60,7 +61,7 @@ library.add(
   faChevronUp,
 );
 
-function App() {
+function App(props) {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -85,14 +86,27 @@ function App() {
             flexDirection: "column",
           }}
         >
-          <div className="unikLoaderLogo" style={{width: '14rem', height: '8rem'}}>
-            <img src="./uniklogo.png" alt="" style={{width: '100%', height: '100%'}}/>
+          <div
+            className="unikLoaderLogo"
+            style={{ width: "14rem", height: "8rem" }}
+          >
+            <img
+              src="./uniklogo.png"
+              alt=""
+              style={{ width: "100%", height: "100%" }}
+            />
           </div>
           <BeatLoader color={"rgb(118, 191, 48)"}></BeatLoader>
         </div>
       ) : (
         <>
           <Router>
+            {/* <Helmet>
+              <meta charSet="utf-8" />
+              <title>Unik Sacco - Homepage</title>
+              <meta name="description" content=""/>
+            </Helmet> */}
+            <MetaDecorator title="Unik Sacco | Homepage" description=""></MetaDecorator>
             <Switch>
               <Route exact path="/" component={Homepage} />
               {/* <Route exact path="/about" component={About} /> */}

@@ -261,16 +261,17 @@ const Calculator = () => {
     }
 
     const calculateLoan = (e) => {
-      //e.preventDefault();
-      //A = P(1 + r/n)^nt
+      //A = P * (r(1 + r)^n) / ((1 + r)^n - 1)
 
-      const timePeriod = (duration/12)
+      const intr = (interest/1200)
 
-      const totalPayment = (principal * Math.pow((1 + (interest/(12*100))), (12 * timePeriod)));
+      const monthlyPayment = duration ? (principal * intr / (1 - (Math.pow(1/(1 + intr), duration)))) : 0;
 
-      const totalInterest = totalPayment - principal;
+      const totalPayment = duration * monthlyPayment;
 
-      const monthlyPayment = totalPayment/(duration);
+      const TotalAmountofCredit = ((monthlyPayment / intr) * (1 - Math.pow((1 + intr), (-duration))));
+
+      const totalInterest = (totalPayment - TotalAmountofCredit);
 
       setMonthlyPayment(monthlyPayment.toFixed(2));
       setTotalInterest(totalInterest.toFixed(2));
@@ -354,7 +355,7 @@ const Calculator = () => {
                   you are interested in getting a loan with us, you should
                   contact us directly.
                 </li>
-                <li>The interest is calculated on a flat-rate basis.</li>
+                <li>The interest is calculated on a reducing balance basis.</li>
                 <li>
                   The external charges featured here are estimates on third
                   party costs that are associated with the loan facility that
